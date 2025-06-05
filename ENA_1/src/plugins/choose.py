@@ -61,7 +61,7 @@ async def handle_chooser(event: GroupMessageEvent):
     option4 = "都不要"
 
     result = random.choice([option1, option2, option3, option4])
-
+    
     reply_msg = Message([
         MessageSegment.reply(event.message_id),
         MessageSegment.text(f"Ena建议你选择{result}")

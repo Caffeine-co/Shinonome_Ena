@@ -61,13 +61,13 @@ async def handle_poke(event: PokeNotifyEvent):
         elif random_num == 4:
             message = MessageSegment.text("哎，不想上学")
         else:
-            image_dir = "Your_path/ENA_1/src/plugins/image/"
+            image_dir = "Your_bot_project_absolute_path/src/plugins/image/"
 
             try:
                 image_files = [
                     f for f in os.listdir(image_dir)
                     if os.path.isfile(os.path.join(image_dir, f))
-                       and f.lower().endswith(('.jpg', '.png', '.gif'))
+                       and f.lower().endswith('.gif')
                 ]
 
                 if image_files:

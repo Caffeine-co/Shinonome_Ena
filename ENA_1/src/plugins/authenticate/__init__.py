@@ -8,8 +8,9 @@ from typing import Dict, Tuple
 from nonebot import on_message
 from nonebot.adapters.onebot.v11 import Bot, Message, MessageSegment, GroupMessageEvent
 
-WHITELIST_PATH = Path("Your_path/ENA_1/src/plugins/group_whitelist.json")
-BLACKLIST_PATH = Path("Your_path/ENA_1/src/plugins/user_blacklist.json")
+WHITELIST_PATH = Path("Your_bot_project_absolute_path/src/plugins/group_whitelist.json")
+BLACKLIST_PATH = Path("Your_bot_project_absolute_path/src/plugins/user_blacklist.json")
+
 
 async def check_group_whitelist(group_id: int) -> bool:
     try:
@@ -41,21 +42,21 @@ async def check_user_blacklist(user_id: int) -> bool:
         return True
 
 MAX_DAILY_LIMIT = 1
-EXEMPT_USER_ID = "114514"   # Yourself_qq_id
+EXEMPT_USER_ID = "Your_own_qq_number"
 DATA_FILE = Path(__file__).parent / "usage_data_authenticate.json"
 
 async def check_usage(user_id: str):
     if user_id == EXEMPT_USER_ID:
         return True
-
+    
     try:
         async with aiofiles.open(DATA_FILE, "r") as f:
             data = json.loads(await f.read())
     except FileNotFoundError:
         data = {}
-
+    
     current_date = datetime.now().strftime("%Y-%m-%d")
-
+    
     record = data.get(user_id, {})
     if record.get("date") != current_date:
         new_count = 1
@@ -63,10 +64,10 @@ async def check_usage(user_id: str):
     else:
         new_count = record["count"] + 1
         update_data = {"date": current_date, "count": new_count}
-
+    
     if new_count > MAX_DAILY_LIMIT:
         return False
-
+    
     data[user_id] = update_data
     async with aiofiles.open(DATA_FILE, "w") as f:
         await f.write(json.dumps(data, indent=2))
@@ -113,7 +114,7 @@ async def handle_reply(bot: Bot, event: GroupMessageEvent):
     user_id = event.get_user_id()
 
     reply_msg_id = event.message_id
-
+    
     if not (await check_usage(user_id)):
         await reply_tester.finish(
             MessageSegment.reply(event.message_id) + "今天已经鉴定过了哦，明天再来吧"
@@ -124,7 +125,7 @@ async def handle_reply(bot: Bot, event: GroupMessageEvent):
     try:
         group_nickname = await get_safe_nickname(bot, event)
         random_num = random.randint(0, 1)
-        image_path = f"Your_path/ENA_1/src/plugins/authenticate/{random_num}.jpg"
+        image_path = f"Your_bot_project_absolute_path/src/plugins/authenticate/{random_num}.jpg"
 
         message = Message([
             MessageSegment.reply(event.message_id),

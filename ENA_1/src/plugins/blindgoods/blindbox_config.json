@@ -4,107 +4,107 @@
     "characters": {
       "1": {
         "name": "miku",
-        "image": "Your_path/ENA_1/src/plugins/blindgoods/神高吧唧/miku.png"
+        "image": "Your_bot_project_absolute_path/src/plugins/blindgoods/神高吧唧/miku.png"
       },
       "2": {
         "name": "rin",
-        "image": "Your_path/Ena_1/src/plugins/blindgoods/神高吧唧/rin.png"
+        "image": "Your_bot_project_absolute_path/src/plugins/blindgoods/神高吧唧/rin.png"
       },
       "3": {
         "name": "len",
-        "image": "Your_path/Ena_1/Ena_1/src/plugins/blindgoods/神高吧唧/len.png"
+        "image": "Your_bot_project_absolute_path/src/plugins/blindgoods/神高吧唧/len.png"
       },
       "4": {
         "name": "luka",
-        "image": "Your_path/Ena_1/src/plugins/blindgoods/神高吧唧/luka.png"
+        "image": "Your_bot_project_absolute_path/src/plugins/blindgoods/神高吧唧/luka.png"
       },
       "5": {
         "name": "meiko",
-        "image": "Your_path/Ena_1/src/plugins/blindgoods/神高吧唧/meiko.png"
+        "image": "Your_bot_project_absolute_path/src/plugins/blindgoods/神高吧唧/meiko.png"
       },
       "6": {
         "name": "kaito",
-        "image": "Your_path/Ena_1/src/plugins/blindgoods/神高吧唧/kaito.png"
+        "image": "Your_bot_project_absolute_path/src/plugins/blindgoods/神高吧唧/kaito.png"
       },
       "7": {
         "name": "ick",
-        "image": "Your_path/Ena_1/src/plugins/blindgoods/神高吧唧/ick.png"
+        "image": "Your_bot_project_absolute_path/src/plugins/blindgoods/神高吧唧/ick.png"
       },
       "8": {
         "name": "saki",
-        "image": "Your_path/Ena_1/src/plugins/blindgoods/神高吧唧/saki.png"
+        "image": "Your_bot_project_absolute_path/src/plugins/blindgoods/神高吧唧/saki.png"
       },
       "9": {
         "name": "hnm",
-        "image": "Your_path/Ena_1/src/plugins/blindgoods/神高吧唧/hnm.png"
+        "image": "Your_bot_project_absolute_path/src/plugins/blindgoods/神高吧唧/hnm.png"
       },
       "10": {
         "name": "shiho",
-        "image": "Your_path/Ena_1/src/plugins/blindgoods/神高吧唧/shiho.png"
+        "image": "Your_bot_project_absolute_path/src/plugins/blindgoods/神高吧唧/shiho.png"
       },
       "11": {
         "name": "mnr",
-        "image": "Your_path/Ena_1/src/plugins/blindgoods/神高吧唧/mnr.png"
+        "image": "Your_bot_project_absolute_path/src/plugins/blindgoods/神高吧唧/mnr.png"
       },
       "12": {
         "name": "airi",
-        "image": "Your_path/Ena_1/src/plugins/blindgoods/神高吧唧/airi.png"
+        "image": "Your_bot_project_absolute_path/src/plugins/blindgoods/神高吧唧/airi.png"
       },
       "13": {
         "name": "hrk",
-        "image": "Your_path/Ena_1/src/plugins/blindgoods/神高吧唧/hrk.png"
+        "image": "Your_bot_project_absolute_path/src/plugins/blindgoods/神高吧唧/hrk.png"
       },
       "14": {
         "name": "szk",
-        "image": "Your_path/Ena_1/src/plugins/blindgoods/神高吧唧/szk.png"
+        "image": "Your_bot_project_absolute_path/src/plugins/blindgoods/神高吧唧/szk.png"
       },
       "15": {
         "name": "khn",
-        "image": "Your_path/Ena_1/src/plugins/blindgoods/神高吧唧/khn.png"
+        "image": "Your_bot_project_absolute_path/src/plugins/blindgoods/神高吧唧/khn.png"
       },
       "16": {
         "name": "an",
-        "image": "Your_path/Ena_1/src/plugins/blindgoods/神高吧唧/an.png"
+        "image": "Your_bot_project_absolute_path/src/plugins/blindgoods/神高吧唧/an.png"
       },
       "17": {
         "name": "akt",
-        "image": "Your_path/Ena_1/src/plugins/blindgoods/神高吧唧/akt.png"
+        "image": "Your_bot_project_absolute_path/src/plugins/blindgoods/神高吧唧/akt.png"
       },
       "18": {
         "name": "toya",
-        "image": "Your_path/Ena_1/src/plugins/blindgoods/神高吧唧/toya.png"
+        "image": "Your_bot_project_absolute_path/src/plugins/blindgoods/神高吧唧/toya.png"
       },
       "19": {
         "name": "tks",
-        "image": "Your_path/Ena_1/src/plugins/blindgoods/神高吧唧/tks.png"
+        "image": "Your_bot_project_absolute_path/src/plugins/blindgoods/神高吧唧/tks.png"
       },
       "20": {
         "name": "emu",
-        "image": "Your_path/Ena_1/src/plugins/blindgoods/神高吧唧/emu.png"
+        "image": "Your_bot_project_absolute_path/src/plugins/blindgoods/神高吧唧/emu.png"
       },
       "21": {
         "name": "nene",
-        "image": "Your_path/Ena_1/src/plugins/blindgoods/神高吧唧/nene.png"
+        "image": "Your_bot_project_absolute_path/src/plugins/blindgoods/神高吧唧/nene.png"
       },
       "22": {
         "name": "rui",
-        "image": "Your_path/Ena_1/src/plugins/blindgoods/神高吧唧/rui.png"
+        "image": "Your_bot_project_absolute_path/src/plugins/blindgoods/神高吧唧/rui.png"
       },
       "23": {
         "name": "knd",
-        "image": "Your_path/Ena_1/src/plugins/blindgoods/神高吧唧/knd.png"
+        "image": "Your_bot_project_absolute_path/src/plugins/blindgoods/神高吧唧/knd.png"
       },
       "24": {
         "name": "mfy",
-        "image": "Your_path/Ena_1/src/plugins/blindgoods/神高吧唧/mfy.png"
+        "image": "Your_bot_project_absolute_path/src/plugins/blindgoods/神高吧唧/mfy.png"
       },
       "25": {
         "name": "ena",
-        "image": "Your_path/Ena_1/src/plugins/blindgoods/神高吧唧/ena.png"
+        "image": "Your_bot_project_absolute_path/src/plugins/blindgoods/神高吧唧/ena.png"
       },
       "26": {
         "name": "mzk",
-        "image": "Your_path/Ena_1/src/plugins/blindgoods/神高吧唧/mzk.png"
+        "image": "Your_bot_project_absolute_path/src/plugins/blindgoods/神高吧唧/mzk.png"
       }
     }
   },
@@ -113,107 +113,107 @@
     "characters": {
       "1": {
         "name": "miku",
-        "image": "Your_path/Ena_1/src/plugins/blindgoods/神高透卡/miku.png"
+        "image": "Your_bot_project_absolute_path/src/plugins/blindgoods/神高透卡/miku.png"
       },
       "2": {
         "name": "rin",
-        "image": "Your_path/Ena_1/src/plugins/blindgoods/神高透卡/rin.png"
+        "image": "Your_bot_project_absolute_path/src/plugins/blindgoods/神高透卡/rin.png"
       },
       "3": {
         "name": "len",
-        "image": "Your_path/Ena_1/src/plugins/blindgoods/神高透卡/len.png"
+        "image": "Your_bot_project_absolute_path/src/plugins/blindgoods/神高透卡/len.png"
       },
       "4": {
         "name": "luka",
-        "image": "Your_path/Ena_1/src/plugins/blindgoods/神高透卡/luka.png"
+        "image": "Your_bot_project_absolute_path/src/plugins/blindgoods/神高透卡/luka.png"
       },
       "5": {
         "name": "meiko",
-        "image": "Your_path/Ena_1/src/plugins/blindgoods/神高透卡/meiko.png"
+        "image": "Your_bot_project_absolute_path/src/plugins/blindgoods/神高透卡/meiko.png"
       },
       "6": {
         "name": "kaito",
-        "image": "Your_path/Ena_1/src/plugins/blindgoods/神高透卡/kaito.png"
+        "image": "Your_bot_project_absolute_path/src/plugins/blindgoods/神高透卡/kaito.png"
       },
       "7": {
         "name": "ick",
-        "image": "Your_path/Ena_1/src/plugins/blindgoods/神高透卡/ick.png"
+        "image": "Your_bot_project_absolute_path/src/plugins/blindgoods/神高透卡/ick.png"
       },
       "8": {
         "name": "saki",
-        "image": "Your_path/Ena_1/src/plugins/blindgoods/神高透卡/saki.png"
+        "image": "Your_bot_project_absolute_path/src/plugins/blindgoods/神高透卡/saki.png"
       },
       "9": {
         "name": "hnm",
-        "image": "Your_path/Ena_1/src/plugins/blindgoods/神高透卡/hnm.png"
+        "image": "Your_bot_project_absolute_path/src/plugins/blindgoods/神高透卡/hnm.png"
       },
       "10": {
         "name": "shiho",
-        "image": "Your_path/Ena_1/src/plugins/blindgoods/神高透卡/shiho.png"
+        "image": "Your_bot_project_absolute_path/src/plugins/blindgoods/神高透卡/shiho.png"
       },
       "11": {
         "name": "mnr",
-        "image": "Your_path/Ena_1/src/plugins/blindgoods/神高透卡/mnr.png"
+        "image": "Your_bot_project_absolute_path/src/plugins/blindgoods/神高透卡/mnr.png"
       },
       "12": {
         "name": "airi",
-        "image": "Your_path/Ena_1/src/plugins/blindgoods/神高透卡/airi.png"
+        "image": "Your_bot_project_absolute_path/src/plugins/blindgoods/神高透卡/airi.png"
       },
       "13": {
         "name": "hrk",
-        "image": "Your_path/Ena_1/src/plugins/blindgoods/神高透卡/hrk.png"
+        "image": "Your_bot_project_absolute_path/src/plugins/blindgoods/神高透卡/hrk.png"
       },
       "14": {
         "name": "szk",
-        "image": "Your_path/Ena_1/src/plugins/blindgoods/神高透卡/szk.png"
+        "image": "Your_bot_project_absolute_path/src/plugins/blindgoods/神高透卡/szk.png"
       },
       "15": {
         "name": "khn",
-        "image": "Your_path/Ena_1/src/plugins/blindgoods/神高透卡/khn.png"
+        "image": "Your_bot_project_absolute_path/src/plugins/blindgoods/神高透卡/khn.png"
       },
       "16": {
         "name": "an",
-        "image": "Your_path/Ena_1/src/plugins/blindgoods/神高透卡/an.png"
+        "image": "Your_bot_project_absolute_path/src/plugins/blindgoods/神高透卡/an.png"
       },
       "17": {
         "name": "akt",
-        "image": "Your_path/Ena_1/src/plugins/blindgoods/神高透卡/akt.png"
+        "image": "Your_bot_project_absolute_path/src/plugins/blindgoods/神高透卡/akt.png"
       },
       "18": {
         "name": "toya",
-        "image": "Your_path/Ena_1/src/plugins/blindgoods/神高透卡/toya.png"
+        "image": "Your_bot_project_absolute_path/src/plugins/blindgoods/神高透卡/toya.png"
       },
       "19": {
         "name": "tks",
-        "image": "Your_path/Ena_1/src/plugins/blindgoods/神高透卡/tks.png"
+        "image": "Your_bot_project_absolute_path/src/plugins/blindgoods/神高透卡/tks.png"
       },
       "20": {
         "name": "emu",
-        "image": "Your_path/Ena_1/src/plugins/blindgoods/神高透卡/emu.png"
+        "image": "Your_bot_project_absolute_path/src/plugins/blindgoods/神高透卡/emu.png"
       },
       "21": {
         "name": "nene",
-        "image": "Your_path/Ena_1/src/plugins/blindgoods/神高透卡/nene.png"
+        "image": "Your_bot_project_absolute_path/src/plugins/blindgoods/神高透卡/nene.png"
       },
       "22": {
         "name": "rui",
-        "image": "Your_path/Ena_1/src/plugins/blindgoods/神高透卡/rui.png"
+        "image": "Your_bot_project_absolute_path/src/plugins/blindgoods/神高透卡/rui.png"
       },
       "23": {
         "name": "knd",
-        "image": "Your_path/Ena_1/src/plugins/blindgoods/神高透卡/knd.png"
+        "image": "Your_bot_project_absolute_path/src/plugins/blindgoods/神高透卡/knd.png"
       },
       "24": {
         "name": "mfy",
-        "image": "Your_path/Ena_1/src/plugins/blindgoods/神高透卡/mfy.png"
+        "image": "Your_bot_project_absolute_path/src/plugins/blindgoods/神高透卡/mfy.png"
       },
       "25": {
         "name": "ena",
-        "image": "Your_path/Ena_1/src/plugins/blindgoods/神高透卡/ena.png"
+        "image": "Your_bot_project_absolute_path/src/plugins/blindgoods/神高透卡/ena.png"
       },
       "26": {
         "name": "mzk",
-        "image": "Your_path/Ena_1/src/plugins/blindgoods/神高透卡/mzk.png"
+        "image": "Your_bot_project_absolute_path/src/plugins/blindgoods/神高透卡/mzk.png"
       }
     }
   },
@@ -222,107 +222,107 @@
     "characters": {
       "1": {
         "name": "miku",
-        "image": "Your_path/Ena_1/src/plugins/blindgoods/神高星挂/miku.png"
+        "image": "Your_bot_project_absolute_path/src/plugins/blindgoods/神高星挂/miku.png"
       },
       "2": {
         "name": "rin",
-        "image": "Your_path/Ena_1/src/plugins/blindgoods/神高星挂/rin.png"
+        "image": "Your_bot_project_absolute_path/src/plugins/blindgoods/神高星挂/rin.png"
       },
       "3": {
         "name": "len",
-        "image": "Your_path/Ena_1/src/plugins/blindgoods/神高星挂/len.png"
+        "image": "Your_bot_project_absolute_path/src/plugins/blindgoods/神高星挂/len.png"
       },
       "4": {
         "name": "luka",
-        "image": "Your_path/Ena_1/src/plugins/blindgoods/神高星挂/luka.png"
+        "image": "Your_bot_project_absolute_path/src/plugins/blindgoods/神高星挂/luka.png"
       },
       "5": {
         "name": "meiko",
-        "image": "Your_path/Ena_1/src/plugins/blindgoods/神高星挂/meiko.png"
+        "image": "Your_bot_project_absolute_path/src/plugins/blindgoods/神高星挂/meiko.png"
       },
       "6": {
         "name": "kaito",
-        "image": "Your_path/Ena_1/src/plugins/blindgoods/神高星挂/kaito.png"
+        "image": "Your_bot_project_absolute_path/src/plugins/blindgoods/神高星挂/kaito.png"
       },
       "7": {
         "name": "ick",
-        "image": "Your_path/Ena_1/src/plugins/blindgoods/神高星挂/ick.png"
+        "image": "Your_bot_project_absolute_path/src/plugins/blindgoods/神高星挂/ick.png"
       },
       "8": {
         "name": "saki",
-        "image": "Your_path/Ena_1/src/plugins/blindgoods/神高星挂/saki.png"
+        "image": "Your_bot_project_absolute_path/src/plugins/blindgoods/神高星挂/saki.png"
       },
       "9": {
         "name": "hnm",
-        "image": "Your_path/Ena_1/src/plugins/blindgoods/神高星挂/hnm.png"
+        "image": "Your_bot_project_absolute_path/src/plugins/blindgoods/神高星挂/hnm.png"
       },
       "10": {
         "name": "shiho",
-        "image": "Your_path/Ena_1/src/plugins/blindgoods/神高星挂/shiho.png"
+        "image": "Your_bot_project_absolute_path/src/plugins/blindgoods/神高星挂/shiho.png"
       },
       "11": {
         "name": "mnr",
-        "image": "Your_path/Ena_1/src/plugins/blindgoods/神高星挂/mnr.png"
+        "image": "Your_bot_project_absolute_path/src/plugins/blindgoods/神高星挂/mnr.png"
       },
       "12": {
         "name": "airi",
-        "image": "Your_path/Ena_1/src/plugins/blindgoods/神高星挂/airi.png"
+        "image": "Your_bot_project_absolute_path/src/plugins/blindgoods/神高星挂/airi.png"
       },
       "13": {
         "name": "hrk",
-        "image": "Your_path/Ena_1/src/plugins/blindgoods/神高星挂/hrk.png"
+        "image": "Your_bot_project_absolute_path/src/plugins/blindgoods/神高星挂/hrk.png"
       },
       "14": {
         "name": "szk",
-        "image": "Your_path/Ena_1/src/plugins/blindgoods/神高星挂/szk.png"
+        "image": "Your_bot_project_absolute_path/src/plugins/blindgoods/神高星挂/szk.png"
       },
       "15": {
         "name": "khn",
-        "image": "Your_path/Ena_1/src/plugins/blindgoods/神高星挂/khn.png"
+        "image": "Your_bot_project_absolute_path/src/plugins/blindgoods/神高星挂/khn.png"
       },
       "16": {
         "name": "an",
-        "image": "Your_path/Ena_1/src/plugins/blindgoods/神高星挂/an.png"
+        "image": "Your_bot_project_absolute_path/src/plugins/blindgoods/神高星挂/an.png"
       },
       "17": {
         "name": "akt",
-        "image": "Your_path/Ena_1/src/plugins/blindgoods/神高星挂/akt.png"
+        "image": "Your_bot_project_absolute_path/src/plugins/blindgoods/神高星挂/akt.png"
       },
       "18": {
         "name": "toya",
-        "image": "Your_path/Ena_1/src/plugins/blindgoods/神高星挂/toya.png"
+        "image": "Your_bot_project_absolute_path/src/plugins/blindgoods/神高星挂/toya.png"
       },
       "19": {
         "name": "tks",
-        "image": "Your_path/Ena_1/src/plugins/blindgoods/神高星挂/tks.png"
+        "image": "Your_bot_project_absolute_path/src/plugins/blindgoods/神高星挂/tks.png"
       },
       "20": {
         "name": "emu",
-        "image": "Your_path/Ena_1/src/plugins/blindgoods/神高星挂/emu.png"
+        "image": "Your_bot_project_absolute_path/src/plugins/blindgoods/神高星挂/emu.png"
       },
       "21": {
         "name": "nene",
-        "image": "Your_path/Ena_1/src/plugins/blindgoods/神高星挂/nene.png"
+        "image": "Your_bot_project_absolute_path/src/plugins/blindgoods/神高星挂/nene.png"
       },
       "22": {
         "name": "rui",
-        "image": "Your_path/Ena_1/src/plugins/blindgoods/神高星挂/rui.png"
+        "image": "Your_bot_project_absolute_path/src/plugins/blindgoods/神高星挂/rui.png"
       },
       "23": {
         "name": "knd",
-        "image": "Your_path/Ena_1/src/plugins/blindgoods/神高星挂/knd.png"
+        "image": "Your_bot_project_absolute_path/src/plugins/blindgoods/神高星挂/knd.png"
       },
       "24": {
         "name": "mfy",
-        "image": "Your_path/Ena_1/src/plugins/blindgoods/神高星挂/mfy.png"
+        "image": "Your_bot_project_absolute_path/src/plugins/blindgoods/神高星挂/mfy.png"
       },
       "25": {
         "name": "ena",
-        "image": "Your_path/Ena_1/src/plugins/blindgoods/神高星挂/ena.png"
+        "image": "Your_bot_project_absolute_path/src/plugins/blindgoods/神高星挂/ena.png"
       },
       "26": {
         "name": "mzk",
-        "image": "Your_path/Ena_1/src/plugins/blindgoods/神高星挂/mzk.png"
+        "image": "Your_bot_project_absolute_path/src/plugins/blindgoods/神高星挂/mzk.png"
       }
     }
   },
@@ -331,107 +331,107 @@
     "characters": {
       "1": {
         "name": "miku",
-        "image": "Your_path/Ena_1/src/plugins/blindgoods/神高色纸/miku.png"
+        "image": "Your_bot_project_absolute_path/src/plugins/blindgoods/神高色纸/miku.png"
       },
       "2": {
         "name": "rin",
-        "image": "Your_path/Ena_1/src/plugins/blindgoods/神高色纸/rin.png"
+        "image": "Your_bot_project_absolute_path/src/plugins/blindgoods/神高色纸/rin.png"
       },
       "3": {
         "name": "len",
-        "image": "Your_path/Ena_1/src/plugins/blindgoods/神高色纸/len.png"
+        "image": "Your_bot_project_absolute_path/src/plugins/blindgoods/神高色纸/len.png"
       },
       "4": {
         "name": "luka",
-        "image": "Your_path/Ena_1/src/plugins/blindgoods/神高色纸/luka.png"
+        "image": "Your_bot_project_absolute_path/src/plugins/blindgoods/神高色纸/luka.png"
       },
       "5": {
         "name": "meiko",
-        "image": "Your_path/Ena_1/src/plugins/blindgoods/神高色纸/meiko.png"
+        "image": "Your_bot_project_absolute_path/src/plugins/blindgoods/神高色纸/meiko.png"
       },
       "6": {
         "name": "kaito",
-        "image": "Your_path/Ena_1/src/plugins/blindgoods/神高色纸/kaito.png"
+        "image": "Your_bot_project_absolute_path/src/plugins/blindgoods/神高色纸/kaito.png"
       },
       "7": {
         "name": "ick",
-        "image": "Your_path/Ena_1/src/plugins/blindgoods/神高色纸/ick.png"
+        "image": "Your_bot_project_absolute_path/src/plugins/blindgoods/神高色纸/ick.png"
       },
       "8": {
         "name": "saki",
-        "image": "Your_path/Ena_1/src/plugins/blindgoods/神高色纸/saki.png"
+        "image": "Your_bot_project_absolute_path/src/plugins/blindgoods/神高色纸/saki.png"
       },
       "9": {
         "name": "hnm",
-        "image": "Your_path/Ena_1/src/plugins/blindgoods/神高色纸/hnm.png"
+        "image": "Your_bot_project_absolute_path/src/plugins/blindgoods/神高色纸/hnm.png"
       },
       "10": {
         "name": "shiho",
-        "image": "Your_path/Ena_1/src/plugins/blindgoods/神高色纸/shiho.png"
+        "image": "Your_bot_project_absolute_path/src/plugins/blindgoods/神高色纸/shiho.png"
       },
       "11": {
         "name": "mnr",
-        "image": "Your_path/Ena_1/src/plugins/blindgoods/神高色纸/mnr.png"
+        "image": "Your_bot_project_absolute_path/src/plugins/blindgoods/神高色纸/mnr.png"
       },
       "12": {
         "name": "airi",
-        "image": "Your_path/Ena_1/src/plugins/blindgoods/神高色纸/airi.png"
+        "image": "Your_bot_project_absolute_path/src/plugins/blindgoods/神高色纸/airi.png"
       },
       "13": {
         "name": "hrk",
-        "image": "Your_path/Ena_1/src/plugins/blindgoods/神高色纸/hrk.png"
+        "image": "Your_bot_project_absolute_path/src/plugins/blindgoods/神高色纸/hrk.png"
       },
       "14": {
         "name": "szk",
-        "image": "Your_path/Ena_1/src/plugins/blindgoods/神高色纸/szk.png"
+        "image": "Your_bot_project_absolute_path/src/plugins/blindgoods/神高色纸/szk.png"
       },
       "15": {
         "name": "khn",
-        "image": "Your_path/Ena_1/src/plugins/blindgoods/神高色纸/khn.png"
+        "image": "Your_bot_project_absolute_path/src/plugins/blindgoods/神高色纸/khn.png"
       },
       "16": {
         "name": "an",
-        "image": "Your_path/Ena_1/src/plugins/blindgoods/神高色纸/an.png"
+        "image": "Your_bot_project_absolute_path/src/plugins/blindgoods/神高色纸/an.png"
       },
       "17": {
         "name": "akt",
-        "image": "Your_path/Ena_1/src/plugins/blindgoods/神高色纸/akt.png"
+        "image": "Your_bot_project_absolute_path/src/plugins/blindgoods/神高色纸/akt.png"
       },
       "18": {
         "name": "toya",
-        "image": "Your_path/Ena_1/src/plugins/blindgoods/神高色纸/toya.png"
+        "image": "Your_bot_project_absolute_path/src/plugins/blindgoods/神高色纸/toya.png"
       },
       "19": {
         "name": "tks",
-        "image": "Your_path/Ena_1/src/plugins/blindgoods/神高色纸/tks.png"
+        "image": "Your_bot_project_absolute_path/src/plugins/blindgoods/神高色纸/tks.png"
       },
       "20": {
         "name": "emu",
-        "image": "Your_path/Ena_1/src/plugins/blindgoods/神高色纸/emu.png"
+        "image": "Your_bot_project_absolute_path/src/plugins/blindgoods/神高色纸/emu.png"
       },
       "21": {
         "name": "nene",
-        "image": "Your_path/Ena_1/src/plugins/blindgoods/神高色纸/nene.png"
+        "image": "Your_bot_project_absolute_path/src/plugins/blindgoods/神高色纸/nene.png"
       },
       "22": {
         "name": "rui",
-        "image": "Your_path/Ena_1/src/plugins/blindgoods/神高色纸/rui.png"
+        "image": "Your_bot_project_absolute_path/src/plugins/blindgoods/神高色纸/rui.png"
       },
       "23": {
         "name": "knd",
-        "image": "Your_path/Ena_1/src/plugins/blindgoods/神高色纸/knd.png"
+        "image": "Your_bot_project_absolute_path/src/plugins/blindgoods/神高色纸/knd.png"
       },
       "24": {
         "name": "mfy",
-        "image": "Your_path/Ena_1/src/plugins/blindgoods/神高色纸/mfy.png"
+        "image": "Your_bot_project_absolute_path/src/plugins/blindgoods/神高色纸/mfy.png"
       },
       "25": {
         "name": "ena",
-        "image": "Your_path/Ena_1/src/plugins/blindgoods/神高色纸/ena.png"
+        "image": "Your_bot_project_absolute_path/src/plugins/blindgoods/神高色纸/ena.png"
       },
       "26": {
         "name": "mzk",
-        "image": "Your_path/Ena_1/src/plugins/blindgoods/神高色纸/mzk.png"
+        "image": "Your_bot_project_absolute_path/src/plugins/blindgoods/神高色纸/mzk.png"
       }
     }
   },
@@ -440,107 +440,107 @@
     "characters": {
       "1": {
         "name": "miku",
-        "image": "Your_path/Ena_1/src/plugins/blindgoods/神高立牌/miku.png"
+        "image": "Your_bot_project_absolute_path/src/plugins/blindgoods/神高立牌/miku.png"
       },
       "2": {
         "name": "rin",
-        "image": "Your_path/Ena_1/src/plugins/blindgoods/神高立牌/rin.png"
+        "image": "Your_bot_project_absolute_path/src/plugins/blindgoods/神高立牌/rin.png"
       },
       "3": {
         "name": "len",
-        "image": "Your_path/Ena_1/src/plugins/blindgoods/神高立牌/len.png"
+        "image": "Your_bot_project_absolute_path/src/plugins/blindgoods/神高立牌/len.png"
       },
       "4": {
         "name": "luka",
-        "image": "Your_path/Ena_1/src/plugins/blindgoods/神高立牌/luka.png"
+        "image": "Your_bot_project_absolute_path/src/plugins/blindgoods/神高立牌/luka.png"
       },
       "5": {
         "name": "meiko",
-        "image": "Your_path/Ena_1/src/plugins/blindgoods/神高立牌/meiko.png"
+        "image": "Your_bot_project_absolute_path/src/plugins/blindgoods/神高立牌/meiko.png"
       },
       "6": {
         "name": "kaito",
-        "image": "Your_path/Ena_1/src/plugins/blindgoods/神高立牌/kaito.png"
+        "image": "Your_bot_project_absolute_path/src/plugins/blindgoods/神高立牌/kaito.png"
       },
       "7": {
         "name": "ick",
-        "image": "Your_path/Ena_1/src/plugins/blindgoods/神高立牌/ick.png"
+        "image": "Your_bot_project_absolute_path/src/plugins/blindgoods/神高立牌/ick.png"
       },
       "8": {
         "name": "saki",
-        "image": "Your_path/Ena_1/src/plugins/blindgoods/神高立牌/saki.png"
+        "image": "Your_bot_project_absolute_path/src/plugins/blindgoods/神高立牌/saki.png"
       },
       "9": {
         "name": "hnm",
-        "image": "Your_path/Ena_1/src/plugins/blindgoods/神高立牌/hnm.png"
+        "image": "Your_bot_project_absolute_path/src/plugins/blindgoods/神高立牌/hnm.png"
       },
       "10": {
         "name": "shiho",
-        "image": "Your_path/Ena_1/src/plugins/blindgoods/神高立牌/shiho.png"
+        "image": "Your_bot_project_absolute_path/src/plugins/blindgoods/神高立牌/shiho.png"
       },
       "11": {
         "name": "mnr",
-        "image": "Your_path/Ena_1/src/plugins/blindgoods/神高立牌/mnr.png"
+        "image": "Your_bot_project_absolute_path/src/plugins/blindgoods/神高立牌/mnr.png"
       },
       "12": {
         "name": "airi",
-        "image": "Your_path/Ena_1/src/plugins/blindgoods/神高立牌/airi.png"
+        "image": "Your_bot_project_absolute_path/src/plugins/blindgoods/神高立牌/airi.png"
       },
       "13": {
         "name": "hrk",
-        "image": "Your_path/Ena_1/src/plugins/blindgoods/神高立牌/hrk.png"
+        "image": "Your_bot_project_absolute_path/src/plugins/blindgoods/神高立牌/hrk.png"
       },
       "14": {
         "name": "szk",
-        "image": "Your_path/Ena_1/src/plugins/blindgoods/神高立牌/szk.png"
+        "image": "Your_bot_project_absolute_path/src/plugins/blindgoods/神高立牌/szk.png"
       },
       "15": {
         "name": "khn",
-        "image": "Your_path/Ena_1/src/plugins/blindgoods/神高立牌/khn.png"
+        "image": "Your_bot_project_absolute_path/src/plugins/blindgoods/神高立牌/khn.png"
       },
       "16": {
         "name": "an",
-        "image": "Your_path/Ena_1/src/plugins/blindgoods/神高立牌/an.png"
+        "image": "Your_bot_project_absolute_path/src/plugins/blindgoods/神高立牌/an.png"
       },
       "17": {
         "name": "akt",
-        "image": "Your_path/Ena_1/src/plugins/blindgoods/神高立牌/akt.png"
+        "image": "Your_bot_project_absolute_path/src/plugins/blindgoods/神高立牌/akt.png"
       },
       "18": {
         "name": "toya",
-        "image": "Your_path/Ena_1/src/plugins/blindgoods/神高立牌/toya.png"
+        "image": "Your_bot_project_absolute_path/src/plugins/blindgoods/神高立牌/toya.png"
       },
       "19": {
         "name": "tks",
-        "image": "Your_path/Ena_1/src/plugins/blindgoods/神高立牌/tks.png"
+        "image": "Your_bot_project_absolute_path/src/plugins/blindgoods/神高立牌/tks.png"
       },
       "20": {
         "name": "emu",
-        "image": "Your_path/Ena_1/src/plugins/blindgoods/神高立牌/emu.png"
+        "image": "Your_bot_project_absolute_path/src/plugins/blindgoods/神高立牌/emu.png"
       },
       "21": {
         "name": "nene",
-        "image": "Your_path/Ena_1/src/plugins/blindgoods/神高立牌/nene.png"
+        "image": "Your_bot_project_absolute_path/src/plugins/blindgoods/神高立牌/nene.png"
       },
       "22": {
         "name": "rui",
-        "image": "Your_path/Ena_1/src/plugins/blindgoods/神高立牌/rui.png"
+        "image": "Your_bot_project_absolute_path/src/plugins/blindgoods/神高立牌/rui.png"
       },
       "23": {
         "name": "knd",
-        "image": "Your_path/Ena_1/src/plugins/blindgoods/神高立牌/knd.png"
+        "image": "Your_bot_project_absolute_path/src/plugins/blindgoods/神高立牌/knd.png"
       },
       "24": {
         "name": "mfy",
-        "image": "Your_path/Ena_1/src/plugins/blindgoods/神高立牌/mfy.png"
+        "image": "Your_bot_project_absolute_path/src/plugins/blindgoods/神高立牌/mfy.png"
       },
       "25": {
         "name": "ena",
-        "image": "Your_path/Ena_1/src/plugins/blindgoods/神高立牌/ena.png"
+        "image": "Your_bot_project_absolute_path/src/plugins/blindgoods/神高立牌/ena.png"
       },
       "26": {
         "name": "mzk",
-        "image": "Your_path/Ena_1/src/plugins/blindgoods/神高立牌/mzk.png"
+        "image": "Your_bot_project_absolute_path/src/plugins/blindgoods/神高立牌/mzk.png"
       }
     }
   },
@@ -549,107 +549,107 @@
     "characters": {
       "1": {
         "name": "miku",
-        "image": "Your_path/Ena_1/src/plugins/blindgoods/感谢祭吧唧/miku.png"
+        "image": "Your_bot_project_absolute_path/src/plugins/blindgoods/感谢祭吧唧/miku.png"
       },
       "2": {
         "name": "rin",
-        "image": "Your_path/Ena_1/src/plugins/blindgoods/感谢祭吧唧/rin.png"
+        "image": "Your_bot_project_absolute_path/src/plugins/blindgoods/感谢祭吧唧/rin.png"
       },
       "3": {
         "name": "len",
-        "image": "Your_path/Ena_1/src/plugins/blindgoods/感谢祭吧唧/len.png"
+        "image": "Your_bot_project_absolute_path/src/plugins/blindgoods/感谢祭吧唧/len.png"
       },
       "4": {
         "name": "luka",
-        "image": "Your_path/Ena_1/src/plugins/blindgoods/感谢祭吧唧/luka.png"
+        "image": "Your_bot_project_absolute_path/src/plugins/blindgoods/感谢祭吧唧/luka.png"
       },
       "5": {
         "name": "meiko",
-        "image": "Your_path/Ena_1/src/plugins/blindgoods/感谢祭吧唧/meiko.png"
+        "image": "Your_bot_project_absolute_path/src/plugins/blindgoods/感谢祭吧唧/meiko.png"
       },
       "6": {
         "name": "kaito",
-        "image": "Your_path/Ena_1/src/plugins/blindgoods/感谢祭吧唧/kaito.png"
+        "image": "Your_bot_project_absolute_path/src/plugins/blindgoods/感谢祭吧唧/kaito.png"
       },
       "7": {
         "name": "ick",
-        "image": "Your_path/Ena_1/src/plugins/blindgoods/感谢祭吧唧/ick.png"
+        "image": "Your_bot_project_absolute_path/src/plugins/blindgoods/感谢祭吧唧/ick.png"
       },
       "8": {
         "name": "saki",
-        "image": "Your_path/Ena_1/src/plugins/blindgoods/感谢祭吧唧/saki.png"
+        "image": "Your_bot_project_absolute_path/src/plugins/blindgoods/感谢祭吧唧/saki.png"
       },
       "9": {
         "name": "hnm",
-        "image": "Your_path/Ena_1/src/plugins/blindgoods/感谢祭吧唧/hnm.png"
+        "image": "Your_bot_project_absolute_path/src/plugins/blindgoods/感谢祭吧唧/hnm.png"
       },
       "10": {
         "name": "shiho",
-        "image": "Your_path/Ena_1/src/plugins/blindgoods/感谢祭吧唧/shiho.png"
+        "image": "Your_bot_project_absolute_path/src/plugins/blindgoods/感谢祭吧唧/shiho.png"
       },
       "11": {
         "name": "mnr",
-        "image": "Your_path/Ena_1/src/plugins/blindgoods/感谢祭吧唧/mnr.png"
+        "image": "Your_bot_project_absolute_path/src/plugins/blindgoods/感谢祭吧唧/mnr.png"
       },
       "12": {
         "name": "airi",
-        "image": "Your_path/Ena_1/src/plugins/blindgoods/感谢祭吧唧/airi.png"
+        "image": "Your_bot_project_absolute_path/src/plugins/blindgoods/感谢祭吧唧/airi.png"
       },
       "13": {
         "name": "hrk",
-        "image": "Your_path/Ena_1/src/plugins/blindgoods/感谢祭吧唧/hrk.png"
+        "image": "Your_bot_project_absolute_path/src/plugins/blindgoods/感谢祭吧唧/hrk.png"
       },
       "14": {
         "name": "szk",
-        "image": "Your_path/Ena_1/src/plugins/blindgoods/感谢祭吧唧/szk.png"
+        "image": "Your_bot_project_absolute_path/src/plugins/blindgoods/感谢祭吧唧/szk.png"
       },
       "15": {
         "name": "khn",
-        "image": "Your_path/Ena_1/src/plugins/blindgoods/感谢祭吧唧/khn.png"
+        "image": "Your_bot_project_absolute_path/src/plugins/blindgoods/感谢祭吧唧/khn.png"
       },
       "16": {
         "name": "an",
-        "image": "Your_path/Ena_1/src/plugins/blindgoods/感谢祭吧唧/an.png"
+        "image": "Your_bot_project_absolute_path/src/plugins/blindgoods/感谢祭吧唧/an.png"
       },
       "17": {
         "name": "akt",
-        "image": "Your_path/Ena_1/src/plugins/blindgoods/感谢祭吧唧/akt.png"
+        "image": "Your_bot_project_absolute_path/src/plugins/blindgoods/感谢祭吧唧/akt.png"
       },
       "18": {
         "name": "toya",
-        "image": "Your_path/Ena_1/src/plugins/blindgoods/感谢祭吧唧/toya.png"
+        "image": "Your_bot_project_absolute_path/src/plugins/blindgoods/感谢祭吧唧/toya.png"
       },
       "19": {
         "name": "tks",
-        "image": "Your_path/Ena_1/src/plugins/blindgoods/感谢祭吧唧/tks.png"
+        "image": "Your_bot_project_absolute_path/src/plugins/blindgoods/感谢祭吧唧/tks.png"
       },
       "20": {
         "name": "emu",
-        "image": "Your_path/Ena_1/src/plugins/blindgoods/感谢祭吧唧/emu.png"
+        "image": "Your_bot_project_absolute_path/src/plugins/blindgoods/感谢祭吧唧/emu.png"
       },
       "21": {
         "name": "nene",
-        "image": "Your_path/Ena_1/src/plugins/blindgoods/感谢祭吧唧/nene.png"
+        "image": "Your_bot_project_absolute_path/src/plugins/blindgoods/感谢祭吧唧/nene.png"
       },
       "22": {
         "name": "rui",
-        "image": "Your_path/Ena_1/src/plugins/blindgoods/感谢祭吧唧/rui.png"
+        "image": "Your_bot_project_absolute_path/src/plugins/blindgoods/感谢祭吧唧/rui.png"
       },
       "23": {
         "name": "knd",
-        "image": "Your_path/Ena_1/src/plugins/blindgoods/感谢祭吧唧/knd.png"
+        "image": "Your_bot_project_absolute_path/src/plugins/blindgoods/感谢祭吧唧/knd.png"
       },
       "24": {
         "name": "mfy",
-        "image": "Your_path/Ena_1/src/plugins/blindgoods/感谢祭吧唧/mfy.png"
+        "image": "Your_bot_project_absolute_path/src/plugins/blindgoods/感谢祭吧唧/mfy.png"
       },
       "25": {
         "name": "ena",
-        "image": "Your_path/Ena_1/src/plugins/blindgoods/感谢祭吧唧/ena.png"
+        "image": "Your_bot_project_absolute_path/src/plugins/blindgoods/感谢祭吧唧/ena.png"
       },
       "26": {
         "name": "mzk",
-        "image": "Your_path/Ena_1/src/plugins/blindgoods/感谢祭吧唧/mzk.png"
+        "image": "Your_bot_project_absolute_path/src/plugins/blindgoods/感谢祭吧唧/mzk.png"
       }
     }
   },
@@ -658,107 +658,107 @@
     "characters": {
       "1": {
         "name": "miku",
-        "image": "Your_path/Ena_1/src/plugins/blindgoods/感谢祭心砖/miku.png"
+        "image": "Your_bot_project_absolute_path/src/plugins/blindgoods/感谢祭心砖/miku.png"
       },
       "2": {
         "name": "rin",
-        "image": "Your_path/Ena_1/src/plugins/blindgoods/感谢祭心砖/rin.png"
+        "image": "Your_bot_project_absolute_path/src/plugins/blindgoods/感谢祭心砖/rin.png"
       },
       "3": {
         "name": "len",
-        "image": "Your_path/Ena_1/src/plugins/blindgoods/感谢祭心砖/len.png"
+        "image": "Your_bot_project_absolute_path/src/plugins/blindgoods/感谢祭心砖/len.png"
       },
       "4": {
         "name": "luka",
-        "image": "Your_path/Ena_1/src/plugins/blindgoods/感谢祭心砖/luka.png"
+        "image": "Your_bot_project_absolute_path/src/plugins/blindgoods/感谢祭心砖/luka.png"
       },
       "5": {
         "name": "meiko",
-        "image": "Your_path/Ena_1/src/plugins/blindgoods/感谢祭心砖/meiko.png"
+        "image": "Your_bot_project_absolute_path/src/plugins/blindgoods/感谢祭心砖/meiko.png"
       },
       "6": {
         "name": "kaito",
-        "image": "Your_path/Ena_1/src/plugins/blindgoods/感谢祭心砖/kaito.png"
+        "image": "Your_bot_project_absolute_path/src/plugins/blindgoods/感谢祭心砖/kaito.png"
       },
       "7": {
         "name": "ick",
-        "image": "Your_path/Ena_1/src/plugins/blindgoods/感谢祭心砖/ick.png"
+        "image": "Your_bot_project_absolute_path/src/plugins/blindgoods/感谢祭心砖/ick.png"
       },
       "8": {
         "name": "saki",
-        "image": "Your_path/Ena_1/src/plugins/blindgoods/感谢祭心砖/saki.png"
+        "image": "Your_bot_project_absolute_path/src/plugins/blindgoods/感谢祭心砖/saki.png"
       },
       "9": {
         "name": "hnm",
-        "image": "Your_path/Ena_1/src/plugins/blindgoods/感谢祭心砖/hnm.png"
+        "image": "Your_bot_project_absolute_path/src/plugins/blindgoods/感谢祭心砖/hnm.png"
       },
       "10": {
         "name": "shiho",
-        "image": "Your_path/Ena_1/src/plugins/blindgoods/感谢祭心砖/shiho.png"
+        "image": "Your_bot_project_absolute_path/src/plugins/blindgoods/感谢祭心砖/shiho.png"
       },
       "11": {
         "name": "mnr",
-        "image": "Your_path/Ena_1/src/plugins/blindgoods/感谢祭心砖/mnr.png"
+        "image": "Your_bot_project_absolute_path/src/plugins/blindgoods/感谢祭心砖/mnr.png"
       },
       "12": {
         "name": "airi",
-        "image": "Your_path/Ena_1/src/plugins/blindgoods/感谢祭心砖/airi.png"
+        "image": "Your_bot_project_absolute_path/src/plugins/blindgoods/感谢祭心砖/airi.png"
       },
       "13": {
         "name": "hrk",
-        "image": "Your_path/Ena_1/src/plugins/blindgoods/感谢祭心砖/hrk.png"
+        "image": "Your_bot_project_absolute_path/src/plugins/blindgoods/感谢祭心砖/hrk.png"
       },
       "14": {
         "name": "szk",
-        "image": "Your_path/Ena_1/src/plugins/blindgoods/感谢祭心砖/szk.png"
+        "image": "Your_bot_project_absolute_path/src/plugins/blindgoods/感谢祭心砖/szk.png"
       },
       "15": {
         "name": "khn",
-        "image": "Your_path/Ena_1/src/plugins/blindgoods/感谢祭心砖/khn.png"
+        "image": "Your_bot_project_absolute_path/src/plugins/blindgoods/感谢祭心砖/khn.png"
       },
       "16": {
         "name": "an",
-        "image": "Your_path/Ena_1/src/plugins/blindgoods/感谢祭心砖/an.png"
+        "image": "Your_bot_project_absolute_path/src/plugins/blindgoods/感谢祭心砖/an.png"
       },
       "17": {
         "name": "akt",
-        "image": "Your_path/Ena_1/src/plugins/blindgoods/感谢祭心砖/akt.png"
+        "image": "Your_bot_project_absolute_path/src/plugins/blindgoods/感谢祭心砖/akt.png"
       },
       "18": {
         "name": "toya",
-        "image": "Your_path/Ena_1/src/plugins/blindgoods/感谢祭心砖/toya.png"
+        "image": "Your_bot_project_absolute_path/src/plugins/blindgoods/感谢祭心砖/toya.png"
       },
       "19": {
         "name": "tks",
-        "image": "Your_path/Ena_1/src/plugins/blindgoods/感谢祭心砖/tks.png"
+        "image": "Your_bot_project_absolute_path/src/plugins/blindgoods/感谢祭心砖/tks.png"
       },
       "20": {
         "name": "emu",
-        "image": "Your_path/Ena_1/src/plugins/blindgoods/感谢祭心砖/emu.png"
+        "image": "Your_bot_project_absolute_path/src/plugins/blindgoods/感谢祭心砖/emu.png"
       },
       "21": {
         "name": "nene",
-        "image": "Your_path/Ena_1/src/plugins/blindgoods/感谢祭心砖/nene.png"
+        "image": "Your_bot_project_absolute_path/src/plugins/blindgoods/感谢祭心砖/nene.png"
       },
       "22": {
         "name": "rui",
-        "image": "Your_path/Ena_1/src/plugins/blindgoods/感谢祭心砖/rui.png"
+        "image": "Your_bot_project_absolute_path/src/plugins/blindgoods/感谢祭心砖/rui.png"
       },
       "23": {
         "name": "knd",
-        "image": "Your_path/Ena_1/src/plugins/blindgoods/感谢祭心砖/knd.png"
+        "image": "Your_bot_project_absolute_path/src/plugins/blindgoods/感谢祭心砖/knd.png"
       },
       "24": {
         "name": "mfy",
-        "image": "Your_path/Ena_1/src/plugins/blindgoods/感谢祭心砖/mfy.png"
+        "image": "Your_bot_project_absolute_path/src/plugins/blindgoods/感谢祭心砖/mfy.png"
       },
       "25": {
         "name": "ena",
-        "image": "Your_path/Ena_1/src/plugins/blindgoods/感谢祭心砖/ena.png"
+        "image": "Your_bot_project_absolute_path/src/plugins/blindgoods/感谢祭心砖/ena.png"
       },
       "26": {
         "name": "mzk",
-        "image": "Your_path/Ena_1/src/plugins/blindgoods/感谢祭心砖/mzk.png"
+        "image": "Your_bot_project_absolute_path/src/plugins/blindgoods/感谢祭心砖/mzk.png"
       }
     }
   },
@@ -767,107 +767,107 @@
     "characters": {
       "1": {
         "name": "miku",
-        "image": "Your_path/Ena_1/src/plugins/blindgoods/感谢祭挂件/miku.png"
+        "image": "Your_bot_project_absolute_path/src/plugins/blindgoods/感谢祭挂件/miku.png"
       },
       "2": {
         "name": "rin",
-        "image": "Your_path/Ena_1/src/plugins/blindgoods/感谢祭挂件/rin.png"
+        "image": "Your_bot_project_absolute_path/src/plugins/blindgoods/感谢祭挂件/rin.png"
       },
       "3": {
         "name": "len",
-        "image": "Your_path/Ena_1/src/plugins/blindgoods/感谢祭挂件/len.png"
+        "image": "Your_bot_project_absolute_path/src/plugins/blindgoods/感谢祭挂件/len.png"
       },
       "4": {
         "name": "luka",
-        "image": "Your_path/Ena_1/src/plugins/blindgoods/感谢祭挂件/luka.png"
+        "image": "Your_bot_project_absolute_path/src/plugins/blindgoods/感谢祭挂件/luka.png"
       },
       "5": {
         "name": "meiko",
-        "image": "Your_path/Ena_1/src/plugins/blindgoods/感谢祭挂件/meiko.png"
+        "image": "Your_bot_project_absolute_path/src/plugins/blindgoods/感谢祭挂件/meiko.png"
       },
       "6": {
         "name": "kaito",
-        "image": "Your_path/Ena_1/src/plugins/blindgoods/感谢祭挂件/kaito.png"
+        "image": "Your_bot_project_absolute_path/src/plugins/blindgoods/感谢祭挂件/kaito.png"
       },
       "7": {
         "name": "ick",
-        "image": "Your_path/Ena_1/src/plugins/blindgoods/感谢祭挂件/ick.png"
+        "image": "Your_bot_project_absolute_path/src/plugins/blindgoods/感谢祭挂件/ick.png"
       },
       "8": {
         "name": "saki",
-        "image": "Your_path/Ena_1/src/plugins/blindgoods/感谢祭挂件/saki.png"
+        "image": "Your_bot_project_absolute_path/src/plugins/blindgoods/感谢祭挂件/saki.png"
       },
       "9": {
         "name": "hnm",
-        "image": "Your_path/Ena_1/src/plugins/blindgoods/感谢祭挂件/hnm.png"
+        "image": "Your_bot_project_absolute_path/src/plugins/blindgoods/感谢祭挂件/hnm.png"
       },
       "10": {
         "name": "shiho",
-        "image": "Your_path/Ena_1/src/plugins/blindgoods/感谢祭挂件/shiho.png"
+        "image": "Your_bot_project_absolute_path/src/plugins/blindgoods/感谢祭挂件/shiho.png"
       },
       "11": {
         "name": "mnr",
-        "image": "Your_path/Ena_1/src/plugins/blindgoods/感谢祭挂件/mnr.png"
+        "image": "Your_bot_project_absolute_path/src/plugins/blindgoods/感谢祭挂件/mnr.png"
       },
       "12": {
         "name": "airi",
-        "image": "Your_path/Ena_1/src/plugins/blindgoods/感谢祭挂件/airi.png"
+        "image": "Your_bot_project_absolute_path/src/plugins/blindgoods/感谢祭挂件/airi.png"
       },
       "13": {
         "name": "hrk",
-        "image": "Your_path/Ena_1/src/plugins/blindgoods/感谢祭挂件/hrk.png"
+        "image": "Your_bot_project_absolute_path/src/plugins/blindgoods/感谢祭挂件/hrk.png"
       },
       "14": {
         "name": "szk",
-        "image": "Your_path/Ena_1/src/plugins/blindgoods/感谢祭挂件/szk.png"
+        "image": "Your_bot_project_absolute_path/src/plugins/blindgoods/感谢祭挂件/szk.png"
       },
       "15": {
         "name": "khn",
-        "image": "Your_path/Ena_1/src/plugins/blindgoods/感谢祭挂件/khn.png"
+        "image": "Your_bot_project_absolute_path/src/plugins/blindgoods/感谢祭挂件/khn.png"
       },
       "16": {
         "name": "an",
-        "image": "Your_path/Ena_1/src/plugins/blindgoods/感谢祭挂件/an.png"
+        "image": "Your_bot_project_absolute_path/src/plugins/blindgoods/感谢祭挂件/an.png"
       },
       "17": {
         "name": "akt",
-        "image": "Your_path/Ena_1/src/plugins/blindgoods/感谢祭挂件/akt.png"
+        "image": "Your_bot_project_absolute_path/src/plugins/blindgoods/感谢祭挂件/akt.png"
       },
       "18": {
         "name": "toya",
-        "image": "Your_path/Ena_1/src/plugins/blindgoods/感谢祭挂件/toya.png"
+        "image": "Your_bot_project_absolute_path/src/plugins/blindgoods/感谢祭挂件/toya.png"
       },
       "19": {
         "name": "tks",
-        "image": "Your_path/Ena_1/src/plugins/blindgoods/感谢祭挂件/tks.png"
+        "image": "Your_bot_project_absolute_path/src/plugins/blindgoods/感谢祭挂件/tks.png"
       },
       "20": {
         "name": "emu",
-        "image": "Your_path/Ena_1/src/plugins/blindgoods/感谢祭挂件/emu.png"
+        "image": "Your_bot_project_absolute_path/src/plugins/blindgoods/感谢祭挂件/emu.png"
       },
       "21": {
         "name": "nene",
-        "image": "Your_path/Ena_1/src/plugins/blindgoods/感谢祭挂件/nene.png"
+        "image": "Your_bot_project_absolute_path/src/plugins/blindgoods/感谢祭挂件/nene.png"
       },
       "22": {
         "name": "rui",
-        "image": "Your_path/Ena_1/src/plugins/blindgoods/感谢祭挂件/rui.png"
+        "image": "Your_bot_project_absolute_path/src/plugins/blindgoods/感谢祭挂件/rui.png"
       },
       "23": {
         "name": "knd",
-        "image": "Your_path/Ena_1/src/plugins/blindgoods/感谢祭挂件/knd.png"
+        "image": "Your_bot_project_absolute_path/src/plugins/blindgoods/感谢祭挂件/knd.png"
       },
       "24": {
         "name": "mfy",
-        "image": "Your_path/Ena_1/src/plugins/blindgoods/感谢祭挂件/mfy.png"
+        "image": "Your_bot_project_absolute_path/src/plugins/blindgoods/感谢祭挂件/mfy.png"
       },
       "25": {
         "name": "ena",
-        "image": "Your_path/Ena_1/src/plugins/blindgoods/感谢祭挂件/ena.png"
+        "image": "Your_bot_project_absolute_path/src/plugins/blindgoods/感谢祭挂件/ena.png"
       },
       "26": {
         "name": "mzk",
-        "image": "Your_path/Ena_1/src/plugins/blindgoods/感谢祭挂件/mzk.png"
+        "image": "Your_bot_project_absolute_path/src/plugins/blindgoods/感谢祭挂件/mzk.png"
       }
     }
   },
@@ -876,131 +876,131 @@
     "characters": {
       "1": {
         "name": "miku",
-        "image": "Your_path/Ena_1/src/plugins/blindgoods/感谢祭ep/miku.png"
+        "image": "Your_bot_project_absolute_path/src/plugins/blindgoods/感谢祭ep/miku.png"
       },
       "2": {
         "name": "rin",
-        "image": "Your_path/Ena_1/src/plugins/blindgoods/感谢祭ep/rin.png"
+        "image": "Your_bot_project_absolute_path/src/plugins/blindgoods/感谢祭ep/rin.png"
       },
       "3": {
         "name": "len",
-        "image": "Your_path/Ena_1/src/plugins/blindgoods/感谢祭ep/len.png"
+        "image": "Your_bot_project_absolute_path/src/plugins/blindgoods/感谢祭ep/len.png"
       },
       "4": {
         "name": "luka",
-        "image": "Your_path/Ena_1/src/plugins/blindgoods/感谢祭ep/luka.png"
+        "image": "Your_bot_project_absolute_path/src/plugins/blindgoods/感谢祭ep/luka.png"
       },
       "5": {
         "name": "meiko",
-        "image": "Your_path/Ena_1/src/plugins/blindgoods/感谢祭ep/meiko.png"
+        "image": "Your_bot_project_absolute_path/src/plugins/blindgoods/感谢祭ep/meiko.png"
       },
       "6": {
         "name": "kaito",
-        "image": "Your_path/Ena_1/src/plugins/blindgoods/感谢祭ep/kaito.png"
+        "image": "Your_bot_project_absolute_path/src/plugins/blindgoods/感谢祭ep/kaito.png"
       },
       "7": {
         "name": "ick",
-        "image": "Your_path/Ena_1/src/plugins/blindgoods/感谢祭ep/ick.png"
+        "image": "Your_bot_project_absolute_path/src/plugins/blindgoods/感谢祭ep/ick.png"
       },
       "8": {
         "name": "saki",
-        "image": "Your_path/Ena_1/src/plugins/blindgoods/感谢祭ep/saki.png"
+        "image": "Your_bot_project_absolute_path/src/plugins/blindgoods/感谢祭ep/saki.png"
       },
       "9": {
         "name": "hnm",
-        "image": "Your_path/Ena_1/src/plugins/blindgoods/感谢祭ep/hnm.png"
+        "image": "Your_bot_project_absolute_path/src/plugins/blindgoods/感谢祭ep/hnm.png"
       },
       "10": {
         "name": "shiho",
-        "image": "Your_path/Ena_1/src/plugins/blindgoods/感谢祭ep/shiho.png"
+        "image": "Your_bot_project_absolute_path/src/plugins/blindgoods/感谢祭ep/shiho.png"
       },
       "11": {
         "name": "mnr",
-        "image": "Your_path/Ena_1/src/plugins/blindgoods/感谢祭ep/mnr.png"
+        "image": "Your_bot_project_absolute_path/src/plugins/blindgoods/感谢祭ep/mnr.png"
       },
       "12": {
         "name": "airi",
-        "image": "Your_path/Ena_1/src/plugins/blindgoods/感谢祭ep/airi.png"
+        "image": "Your_bot_project_absolute_path/src/plugins/blindgoods/感谢祭ep/airi.png"
       },
       "13": {
         "name": "hrk",
-        "image": "Your_path/Ena_1/src/plugins/blindgoods/感谢祭ep/hrk.png"
+        "image": "Your_bot_project_absolute_path/src/plugins/blindgoods/感谢祭ep/hrk.png"
       },
       "14": {
         "name": "szk",
-        "image": "Your_path/Ena_1/src/plugins/blindgoods/感谢祭ep/szk.png"
+        "image": "Your_bot_project_absolute_path/src/plugins/blindgoods/感谢祭ep/szk.png"
       },
       "15": {
         "name": "khn",
-        "image": "Your_path/Ena_1/src/plugins/blindgoods/感谢祭ep/khn.png"
+        "image": "Your_bot_project_absolute_path/src/plugins/blindgoods/感谢祭ep/khn.png"
       },
       "16": {
         "name": "an",
-        "image": "Your_path/Ena_1/src/plugins/blindgoods/感谢祭ep/an.png"
+        "image": "Your_bot_project_absolute_path/src/plugins/blindgoods/感谢祭ep/an.png"
       },
       "17": {
         "name": "akt",
-        "image": "Your_path/Ena_1/src/plugins/blindgoods/感谢祭ep/akt.png"
+        "image": "Your_bot_project_absolute_path/src/plugins/blindgoods/感谢祭ep/akt.png"
       },
       "18": {
         "name": "toya",
-        "image": "Your_path/Ena_1/src/plugins/blindgoods/感谢祭ep/toya.png"
+        "image": "Your_bot_project_absolute_path/src/plugins/blindgoods/感谢祭ep/toya.png"
       },
       "19": {
         "name": "tks",
-        "image": "Your_path/Ena_1/src/plugins/blindgoods/感谢祭ep/tks.png"
+        "image": "Your_bot_project_absolute_path/src/plugins/blindgoods/感谢祭ep/tks.png"
       },
       "20": {
         "name": "emu",
-        "image": "Your_path/Ena_1/src/plugins/blindgoods/感谢祭ep/emu.png"
+        "image": "Your_bot_project_absolute_path/src/plugins/blindgoods/感谢祭ep/emu.png"
       },
       "21": {
         "name": "nene",
-        "image": "Your_path/Ena_1/src/plugins/blindgoods/感谢祭ep/nene.png"
+        "image": "Your_bot_project_absolute_path/src/plugins/blindgoods/感谢祭ep/nene.png"
       },
       "22": {
         "name": "rui",
-        "image": "Your_path/Ena_1/src/plugins/blindgoods/感谢祭ep/rui.png"
+        "image": "Your_bot_project_absolute_path/src/plugins/blindgoods/感谢祭ep/rui.png"
       },
       "23": {
         "name": "knd",
-        "image": "Your_path/Ena_1/src/plugins/blindgoods/感谢祭ep/knd.png"
+        "image": "Your_bot_project_absolute_path/src/plugins/blindgoods/感谢祭ep/knd.png"
       },
       "24": {
         "name": "mfy",
-        "image": "Your_path/Ena_1/src/plugins/blindgoods/感谢祭ep/mfy.png"
+        "image": "Your_bot_project_absolute_path/src/plugins/blindgoods/感谢祭ep/mfy.png"
       },
       "25": {
         "name": "ena",
-        "image": "Your_path/Ena_1/src/plugins/blindgoods/感谢祭ep/ena.png"
+        "image": "Your_bot_project_absolute_path/src/plugins/blindgoods/感谢祭ep/ena.png"
       },
       "26": {
         "name": "mzk",
-        "image": "Your_path/Ena_1/src/plugins/blindgoods/感谢祭ep/mzk.png"
+        "image": "Your_bot_project_absolute_path/src/plugins/blindgoods/感谢祭ep/mzk.png"
       },
       "27": {
         "name": "バーチャル·シンガー",
-        "image": "Your_path/Ena_1/src/plugins/blindgoods/感谢祭ep/v.png"
+        "image": "Your_bot_project_absolute_path/src/plugins/blindgoods/感谢祭ep/v.png"
       },
       "28": {
         "name": "Leo/need",
-        "image": "Your_path/Ena_1/src/plugins/blindgoods/感谢祭ep/ln.png"
+        "image": "Your_bot_project_absolute_path/src/plugins/blindgoods/感谢祭ep/ln.png"
       },
       "29": {
         "name": "MOREMOREJUMP!",
-        "image": "Your_path/Ena_1/src/plugins/blindgoods/感谢祭ep/mmj.png"
+        "image": "Your_bot_project_absolute_path/src/plugins/blindgoods/感谢祭ep/mmj.png"
       },
       "30": {
         "name": "VividBADSQUAD",
-        "image": "Your_path/Ena_1/src/plugins/blindgoods/感谢祭ep/vbs.png"
+        "image": "Your_bot_project_absolute_path/src/plugins/blindgoods/感谢祭ep/vbs.png"
       },
       "31": {
         "name": "ワンダーランズ×ショウタイム",
-        "image": "Your_path/Ena_1/src/plugins/blindgoods/感谢祭ep/ws.png"
+        "image": "Your_bot_project_absolute_path/src/plugins/blindgoods/感谢祭ep/ws.png"
       },
       "32": {
         "name": "25時、ナイトコードで",
-        "image": "Your_path/Ena_1/src/plugins/blindgoods/感谢祭ep/25.png"
+        "image": "Your_bot_project_absolute_path/src/plugins/blindgoods/感谢祭ep/25.png"
       }
     }
   },
@@ -1009,115 +1009,115 @@
     "characters": {
       "1": {
         "name": "miku",
-        "image": "Your_path/Ena_1/src/plugins/blindgoods/宝石箱镜子画/miku.png"
+        "image": "Your_bot_project_absolute_path/src/plugins/blindgoods/宝石箱镜子画/miku.png"
       },
       "2": {
         "name": "rin",
-        "image": "Your_path/Ena_1/src/plugins/blindgoods/宝石箱镜子画/rin.png"
+        "image": "Your_bot_project_absolute_path/src/plugins/blindgoods/宝石箱镜子画/rin.png"
       },
       "3": {
         "name": "len",
-        "image": "Your_path/Ena_1/src/plugins/blindgoods/宝石箱镜子画/len.png"
+        "image": "Your_bot_project_absolute_path/src/plugins/blindgoods/宝石箱镜子画/len.png"
       },
       "4": {
         "name": "luka",
-        "image": "Your_path/Ena_1/src/plugins/blindgoods/宝石箱镜子画/luka.png"
+        "image": "Your_bot_project_absolute_path/src/plugins/blindgoods/宝石箱镜子画/luka.png"
       },
       "5": {
         "name": "meiko",
-        "image": "Your_path/Ena_1/src/plugins/blindgoods/宝石箱镜子画/meiko.png"
+        "image": "Your_bot_project_absolute_path/src/plugins/blindgoods/宝石箱镜子画/meiko.png"
       },
       "6": {
         "name": "kaito",
-        "image": "Your_path/Ena_1/src/plugins/blindgoods/宝石箱镜子画/kaito.png"
+        "image": "Your_bot_project_absolute_path/src/plugins/blindgoods/宝石箱镜子画/kaito.png"
       },
       "7": {
         "name": "ick",
-        "image": "Your_path/Ena_1/src/plugins/blindgoods/宝石箱镜子画/ick.png"
+        "image": "Your_bot_project_absolute_path/src/plugins/blindgoods/宝石箱镜子画/ick.png"
       },
       "8": {
         "name": "saki",
-        "image": "Your_path/Ena_1/src/plugins/blindgoods/宝石箱镜子画/saki.png"
+        "image": "Your_bot_project_absolute_path/src/plugins/blindgoods/宝石箱镜子画/saki.png"
       },
       "9": {
         "name": "hnm",
-        "image": "Your_path/Ena_1/src/plugins/blindgoods/宝石箱镜子画/hnm.png"
+        "image": "Your_bot_project_absolute_path/src/plugins/blindgoods/宝石箱镜子画/hnm.png"
       },
       "10": {
         "name": "shiho",
-        "image": "Your_path/Ena_1/src/plugins/blindgoods/宝石箱镜子画/shiho.png"
+        "image": "Your_bot_project_absolute_path/src/plugins/blindgoods/宝石箱镜子画/shiho.png"
       },
       "11": {
         "name": "mnr",
-        "image": "Your_path/Ena_1/src/plugins/blindgoods/宝石箱镜子画/mnr.png"
+        "image": "Your_bot_project_absolute_path/src/plugins/blindgoods/宝石箱镜子画/mnr.png"
       },
       "12": {
         "name": "airi",
-        "image": "Your_path/Ena_1/src/plugins/blindgoods/宝石箱镜子画/airi.png"
+        "image": "Your_bot_project_absolute_path/src/plugins/blindgoods/宝石箱镜子画/airi.png"
       },
       "13": {
         "name": "hrk",
-        "image": "Your_path/Ena_1/src/plugins/blindgoods/宝石箱镜子画/hrk.png"
+        "image": "Your_bot_project_absolute_path/src/plugins/blindgoods/宝石箱镜子画/hrk.png"
       },
       "14": {
         "name": "szk",
-        "image": "Your_path/Ena_1/src/plugins/blindgoods/宝石箱镜子画/szk.png"
+        "image": "Your_bot_project_absolute_path/src/plugins/blindgoods/宝石箱镜子画/szk.png"
       },
       "15": {
         "name": "khn",
-        "image": "Your_path/Ena_1/src/plugins/blindgoods/宝石箱镜子画/khn.png"
+        "image": "Your_bot_project_absolute_path/src/plugins/blindgoods/宝石箱镜子画/khn.png"
       },
       "16": {
         "name": "an",
-        "image": "Your_path/Ena_1/src/plugins/blindgoods/宝石箱镜子画/an.png"
+        "image": "Your_bot_project_absolute_path/src/plugins/blindgoods/宝石箱镜子画/an.png"
       },
       "17": {
         "name": "akt",
-        "image": "Your_path/Ena_1/src/plugins/blindgoods/宝石箱镜子画/akt.png"
+        "image": "Your_bot_project_absolute_path/src/plugins/blindgoods/宝石箱镜子画/akt.png"
       },
       "18": {
         "name": "toya",
-        "image": "Your_path/Ena_1/src/plugins/blindgoods/宝石箱镜子画/toya.png"
+        "image": "Your_bot_project_absolute_path/src/plugins/blindgoods/宝石箱镜子画/toya.png"
       },
       "19": {
         "name": "tks",
-        "image": "Your_path/Ena_1/src/plugins/blindgoods/宝石箱镜子画/tks.png"
+        "image": "Your_bot_project_absolute_path/src/plugins/blindgoods/宝石箱镜子画/tks.png"
       },
       "20": {
         "name": "emu",
-        "image": "Your_path/Ena_1/src/plugins/blindgoods/宝石箱镜子画/emu.png"
+        "image": "Your_bot_project_absolute_path/src/plugins/blindgoods/宝石箱镜子画/emu.png"
       },
       "21": {
         "name": "nene",
-        "image": "Your_path/Ena_1/src/plugins/blindgoods/宝石箱镜子画/nene.png"
+        "image": "Your_bot_project_absolute_path/src/plugins/blindgoods/宝石箱镜子画/nene.png"
       },
       "22": {
         "name": "rui",
-        "image": "Your_path/Ena_1/src/plugins/blindgoods/宝石箱镜子画/rui.png"
+        "image": "Your_bot_project_absolute_path/src/plugins/blindgoods/宝石箱镜子画/rui.png"
       },
       "23": {
         "name": "knd",
-        "image": "Your_path/Ena_1/src/plugins/blindgoods/宝石箱镜子画/knd.png"
+        "image": "Your_bot_project_absolute_path/src/plugins/blindgoods/宝石箱镜子画/knd.png"
       },
       "24": {
         "name": "mfy",
-        "image": "Your_path/Ena_1/src/plugins/blindgoods/宝石箱镜子画/mfy.png"
+        "image": "Your_bot_project_absolute_path/src/plugins/blindgoods/宝石箱镜子画/mfy.png"
       },
       "25": {
         "name": "ena",
-        "image": "Your_path/Ena_1/src/plugins/blindgoods/宝石箱镜子画/ena.png"
+        "image": "Your_bot_project_absolute_path/src/plugins/blindgoods/宝石箱镜子画/ena.png"
       },
       "26": {
         "name": "mzk",
-        "image": "Your_path/Ena_1/src/plugins/blindgoods/宝石箱镜子画/mzk.png"
+        "image": "Your_bot_project_absolute_path/src/plugins/blindgoods/宝石箱镜子画/mzk.png"
       },
       "27": {
         "name": "米库哒哟",
-        "image": "Your_path/Ena_1/src/plugins/blindgoods/宝石箱镜子画/mikudayo.png"
+        "image": "Your_bot_project_absolute_path/src/plugins/blindgoods/宝石箱镜子画/mikudayo.png"
       },
       "28": {
         "name": "宁宁萝卜",
-        "image": "Your_path/Ena_1/src/plugins/blindgoods/宝石箱镜子画/nenerobot.png"
+        "image": "Your_bot_project_absolute_path/src/plugins/blindgoods/宝石箱镜子画/nenerobot.png"
       }
     }
   },
@@ -1126,107 +1126,107 @@
     "characters": {
       "1": {
         "name": "miku",
-        "image": "Your_path/Ena_1/src/plugins/blindgoods/三丽鸥豆豆眼/miku.png"
+        "image": "Your_bot_project_absolute_path/src/plugins/blindgoods/三丽鸥豆豆眼/miku.png"
       },
       "2": {
         "name": "rin",
-        "image": "Your_path/Ena_1/src/plugins/blindgoods/三丽鸥豆豆眼/rin.png"
+        "image": "Your_bot_project_absolute_path/src/plugins/blindgoods/三丽鸥豆豆眼/rin.png"
       },
       "3": {
         "name": "len",
-        "image": "Your_path/Ena_1/src/plugins/blindgoods/三丽鸥豆豆眼/len.png"
+        "image": "Your_bot_project_absolute_path/src/plugins/blindgoods/三丽鸥豆豆眼/len.png"
       },
       "4": {
         "name": "luka",
-        "image": "Your_path/Ena_1/src/plugins/blindgoods/三丽鸥豆豆眼/luka.png"
+        "image": "Your_bot_project_absolute_path/src/plugins/blindgoods/三丽鸥豆豆眼/luka.png"
       },
       "5": {
         "name": "meiko",
-        "image": "Your_path/Ena_1/src/plugins/blindgoods/三丽鸥豆豆眼/meiko.png"
+        "image": "Your_bot_project_absolute_path/src/plugins/blindgoods/三丽鸥豆豆眼/meiko.png"
       },
       "6": {
         "name": "kaito",
-        "image": "Your_path/Ena_1/src/plugins/blindgoods/三丽鸥豆豆眼/kaito.png"
+        "image": "Your_bot_project_absolute_path/src/plugins/blindgoods/三丽鸥豆豆眼/kaito.png"
       },
       "7": {
         "name": "ick",
-        "image": "Your_path/Ena_1/src/plugins/blindgoods/三丽鸥豆豆眼/ick.png"
+        "image": "Your_bot_project_absolute_path/src/plugins/blindgoods/三丽鸥豆豆眼/ick.png"
       },
       "8": {
         "name": "saki",
-        "image": "Your_path/Ena_1/src/plugins/blindgoods/三丽鸥豆豆眼/saki.png"
+        "image": "Your_bot_project_absolute_path/src/plugins/blindgoods/三丽鸥豆豆眼/saki.png"
       },
       "9": {
         "name": "hnm",
-        "image": "Your_path/Ena_1/src/plugins/blindgoods/三丽鸥豆豆眼/hnm.png"
+        "image": "Your_bot_project_absolute_path/src/plugins/blindgoods/三丽鸥豆豆眼/hnm.png"
       },
       "10": {
         "name": "shiho",
-        "image": "Your_path/Ena_1/src/plugins/blindgoods/三丽鸥豆豆眼/shiho.png"
+        "image": "Your_bot_project_absolute_path/src/plugins/blindgoods/三丽鸥豆豆眼/shiho.png"
       },
       "11": {
         "name": "mnr",
-        "image": "Your_path/Ena_1/src/plugins/blindgoods/三丽鸥豆豆眼/mnr.png"
+        "image": "Your_bot_project_absolute_path/src/plugins/blindgoods/三丽鸥豆豆眼/mnr.png"
       },
       "12": {
         "name": "airi",
-        "image": "Your_path/Ena_1/src/plugins/blindgoods/三丽鸥豆豆眼/airi.png"
+        "image": "Your_bot_project_absolute_path/src/plugins/blindgoods/三丽鸥豆豆眼/airi.png"
       },
       "13": {
         "name": "hrk",
-        "image": "Your_path/Ena_1/src/plugins/blindgoods/三丽鸥豆豆眼/hrk.png"
+        "image": "Your_bot_project_absolute_path/src/plugins/blindgoods/三丽鸥豆豆眼/hrk.png"
       },
       "14": {
         "name": "szk",
-        "image": "Your_path/Ena_1/src/plugins/blindgoods/三丽鸥豆豆眼/szk.png"
+        "image": "Your_bot_project_absolute_path/src/plugins/blindgoods/三丽鸥豆豆眼/szk.png"
       },
       "15": {
         "name": "khn",
-        "image": "Your_path/Ena_1/src/plugins/blindgoods/三丽鸥豆豆眼/khn.png"
+        "image": "Your_bot_project_absolute_path/src/plugins/blindgoods/三丽鸥豆豆眼/khn.png"
       },
       "16": {
         "name": "an",
-        "image": "Your_path/Ena_1/src/plugins/blindgoods/三丽鸥豆豆眼/an.png"
+        "image": "Your_bot_project_absolute_path/src/plugins/blindgoods/三丽鸥豆豆眼/an.png"
       },
       "17": {
         "name": "akt",
-        "image": "Your_path/Ena_1/src/plugins/blindgoods/三丽鸥豆豆眼/akt.png"
+        "image": "Your_bot_project_absolute_path/src/plugins/blindgoods/三丽鸥豆豆眼/akt.png"
       },
       "18": {
         "name": "toya",
-        "image": "Your_path/Ena_1/src/plugins/blindgoods/三丽鸥豆豆眼/toya.png"
+        "image": "Your_bot_project_absolute_path/src/plugins/blindgoods/三丽鸥豆豆眼/toya.png"
       },
       "19": {
         "name": "tks",
-        "image": "Your_path/Ena_1/src/plugins/blindgoods/三丽鸥豆豆眼/tks.png"
+        "image": "Your_bot_project_absolute_path/src/plugins/blindgoods/三丽鸥豆豆眼/tks.png"
       },
       "20": {
         "name": "emu",
-        "image": "Your_path/Ena_1/src/plugins/blindgoods/三丽鸥豆豆眼/emu.png"
+        "image": "Your_bot_project_absolute_path/src/plugins/blindgoods/三丽鸥豆豆眼/emu.png"
       },
       "21": {
         "name": "nene",
-        "image": "Your_path/Ena_1/src/plugins/blindgoods/三丽鸥豆豆眼/nene.png"
+        "image": "Your_bot_project_absolute_path/src/plugins/blindgoods/三丽鸥豆豆眼/nene.png"
       },
       "22": {
         "name": "rui",
-        "image": "Your_path/Ena_1/src/plugins/blindgoods/三丽鸥豆豆眼/rui.png"
+        "image": "Your_bot_project_absolute_path/src/plugins/blindgoods/三丽鸥豆豆眼/rui.png"
       },
       "23": {
         "name": "knd",
-        "image": "Your_path/Ena_1/src/plugins/blindgoods/三丽鸥豆豆眼/knd.png"
+        "image": "Your_bot_project_absolute_path/src/plugins/blindgoods/三丽鸥豆豆眼/knd.png"
       },
       "24": {
         "name": "mfy",
-        "image": "Your_path/Ena_1/src/plugins/blindgoods/三丽鸥豆豆眼/mfy.png"
+        "image": "Your_bot_project_absolute_path/src/plugins/blindgoods/三丽鸥豆豆眼/mfy.png"
       },
       "25": {
         "name": "ena",
-        "image": "Your_path/Ena_1/src/plugins/blindgoods/三丽鸥豆豆眼/ena.png"
+        "image": "Your_bot_project_absolute_path/src/plugins/blindgoods/三丽鸥豆豆眼/ena.png"
       },
       "26": {
         "name": "mzk",
-        "image": "Your_path/Ena_1/src/plugins/blindgoods/三丽鸥豆豆眼/mzk.png"
+        "image": "Your_bot_project_absolute_path/src/plugins/blindgoods/三丽鸥豆豆眼/mzk.png"
       }
     }
   },
@@ -1235,107 +1235,107 @@
     "characters": {
       "1": {
         "name": "miku",
-        "image": "Your_path/Ena_1/src/plugins/blindgoods/新队服吧唧/miku.png"
+        "image": "Your_bot_project_absolute_path/src/plugins/blindgoods/新队服吧唧/miku.png"
       },
       "2": {
         "name": "rin",
-        "image": "Your_path/Ena_1/src/plugins/blindgoods/新队服吧唧/rin.png"
+        "image": "Your_bot_project_absolute_path/src/plugins/blindgoods/新队服吧唧/rin.png"
       },
       "3": {
         "name": "len",
-        "image": "Your_path/Ena_1/src/plugins/blindgoods/新队服吧唧/len.png"
+        "image": "Your_bot_project_absolute_path/src/plugins/blindgoods/新队服吧唧/len.png"
       },
       "4": {
         "name": "luka",
-        "image": "Your_path/Ena_1/src/plugins/blindgoods/新队服吧唧/luka.png"
+        "image": "Your_bot_project_absolute_path/src/plugins/blindgoods/新队服吧唧/luka.png"
       },
       "5": {
         "name": "meiko",
-        "image": "Your_path/Ena_1/src/plugins/blindgoods/新队服吧唧/meiko.png"
+        "image": "Your_bot_project_absolute_path/src/plugins/blindgoods/新队服吧唧/meiko.png"
       },
       "6": {
         "name": "kaito",
-        "image": "Your_path/Ena_1/src/plugins/blindgoods/新队服吧唧/kaito.png"
+        "image": "Your_bot_project_absolute_path/src/plugins/blindgoods/新队服吧唧/kaito.png"
       },
       "7": {
         "name": "ick",
-        "image": "Your_path/Ena_1/src/plugins/blindgoods/新队服吧唧/ick.png"
+        "image": "Your_bot_project_absolute_path/src/plugins/blindgoods/新队服吧唧/ick.png"
       },
       "8": {
         "name": "saki",
-        "image": "Your_path/Ena_1/src/plugins/blindgoods/新队服吧唧/saki.png"
+        "image": "Your_bot_project_absolute_path/src/plugins/blindgoods/新队服吧唧/saki.png"
       },
       "9": {
         "name": "hnm",
-        "image": "Your_path/Ena_1/src/plugins/blindgoods/新队服吧唧/hnm.png"
+        "image": "Your_bot_project_absolute_path/src/plugins/blindgoods/新队服吧唧/hnm.png"
       },
       "10": {
         "name": "shiho",
-        "image": "Your_path/Ena_1/src/plugins/blindgoods/新队服吧唧/shiho.png"
+        "image": "Your_bot_project_absolute_path/src/plugins/blindgoods/新队服吧唧/shiho.png"
       },
       "11": {
         "name": "mnr",
-        "image": "Your_path/Ena_1/src/plugins/blindgoods/新队服吧唧/mnr.png"
+        "image": "Your_bot_project_absolute_path/src/plugins/blindgoods/新队服吧唧/mnr.png"
       },
       "12": {
         "name": "airi",
-        "image": "Your_path/Ena_1/src/plugins/blindgoods/新队服吧唧/airi.png"
+        "image": "Your_bot_project_absolute_path/src/plugins/blindgoods/新队服吧唧/airi.png"
       },
       "13": {
         "name": "hrk",
-        "image": "Your_path/Ena_1/src/plugins/blindgoods/新队服吧唧/hrk.png"
+        "image": "Your_bot_project_absolute_path/src/plugins/blindgoods/新队服吧唧/hrk.png"
       },
       "14": {
         "name": "szk",
-        "image": "Your_path/Ena_1/src/plugins/blindgoods/新队服吧唧/szk.png"
+        "image": "Your_bot_project_absolute_path/src/plugins/blindgoods/新队服吧唧/szk.png"
       },
       "15": {
         "name": "khn",
-        "image": "Your_path/Ena_1/src/plugins/blindgoods/新队服吧唧/khn.png"
+        "image": "Your_bot_project_absolute_path/src/plugins/blindgoods/新队服吧唧/khn.png"
       },
       "16": {
         "name": "an",
-        "image": "Your_path/Ena_1/src/plugins/blindgoods/新队服吧唧/an.png"
+        "image": "Your_bot_project_absolute_path/src/plugins/blindgoods/新队服吧唧/an.png"
       },
       "17": {
         "name": "akt",
-        "image": "Your_path/Ena_1/src/plugins/blindgoods/新队服吧唧/akt.png"
+        "image": "Your_bot_project_absolute_path/src/plugins/blindgoods/新队服吧唧/akt.png"
       },
       "18": {
         "name": "toya",
-        "image": "Your_path/Ena_1/src/plugins/blindgoods/新队服吧唧/toya.png"
+        "image": "Your_bot_project_absolute_path/src/plugins/blindgoods/新队服吧唧/toya.png"
       },
       "19": {
         "name": "tks",
-        "image": "Your_path/Ena_1/src/plugins/blindgoods/新队服吧唧/tks.png"
+        "image": "Your_bot_project_absolute_path/src/plugins/blindgoods/新队服吧唧/tks.png"
       },
       "20": {
         "name": "emu",
-        "image": "Your_path/Ena_1/src/plugins/blindgoods/新队服吧唧/emu.png"
+        "image": "Your_bot_project_absolute_path/src/plugins/blindgoods/新队服吧唧/emu.png"
       },
       "21": {
         "name": "nene",
-        "image": "Your_path/Ena_1/src/plugins/blindgoods/新队服吧唧/nene.png"
+        "image": "Your_bot_project_absolute_path/src/plugins/blindgoods/新队服吧唧/nene.png"
       },
       "22": {
         "name": "rui",
-        "image": "Your_path/Ena_1/src/plugins/blindgoods/新队服吧唧/rui.png"
+        "image": "Your_bot_project_absolute_path/src/plugins/blindgoods/新队服吧唧/rui.png"
       },
       "23": {
         "name": "knd",
-        "image": "Your_path/Ena_1/src/plugins/blindgoods/新队服吧唧/knd.png"
+        "image": "Your_bot_project_absolute_path/src/plugins/blindgoods/新队服吧唧/knd.png"
       },
       "24": {
         "name": "mfy",
-        "image": "Your_path/Ena_1/src/plugins/blindgoods/新队服吧唧/mfy.png"
+        "image": "Your_bot_project_absolute_path/src/plugins/blindgoods/新队服吧唧/mfy.png"
       },
       "25": {
         "name": "ena",
-        "image": "Your_path/Ena_1/src/plugins/blindgoods/新队服吧唧/ena.png"
+        "image": "Your_bot_project_absolute_path/src/plugins/blindgoods/新队服吧唧/ena.png"
       },
       "26": {
         "name": "mzk",
-        "image": "Your_path/Ena_1/src/plugins/blindgoods/新队服吧唧/mzk.png"
+        "image": "Your_bot_project_absolute_path/src/plugins/blindgoods/新队服吧唧/mzk.png"
       }
     }
   }
