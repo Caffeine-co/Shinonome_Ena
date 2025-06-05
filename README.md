@@ -1,7 +1,7 @@
 <div align="center">
 <img src="/images/ena_qute_head.png" alt="icon" width="150px"/>
 <h1 align="center">Shinonome Ena</h1>
-<img src="/images/ena.jpg" alt="icon" width="500px"/>
+<img src="/images/ena.jpg" alt="icon" width="450px"/>
 <h3 align="center">しののめ えなです!</h3>
 
 [![nonebot2](https://img.shields.io/static/v1?label=nonebot&message=v2.4.2&color=red)](https://v2.nonebot.dev/)
@@ -34,7 +34,7 @@ Shinonome Ena，使用跨平台 Python 异步机器人框架 nonebot 作为后�
 
 ### ENA_2
 
->负责 Shinonome Ena 的全局群聊白名单、AI聊天白名单、用户黑名单管理，以及[Haruki Bot](https://docs.haruki.seiunx.com)的收发
+>负责 Shinonome Ena 的全局群聊白名单、AI聊天白名单、用户黑名单管理，以及 [Haruki Bot](https://docs.haruki.seiunx.com) 的收发
 
 ## 玩法列表
 
@@ -60,7 +60,7 @@ Shinonome Ena，使用跨平台 Python 异步机器人框架 nonebot 作为后�
 
 - pjsk赛博周边盲抽
 
-- 多功能pjsk机器人[Haruki Bot](https://docs.haruki.seiunx.com)
+- 多功能pjsk机器人 [Haruki Bot](https://docs.haruki.seiunx.com)
 
 - ~~看什么看，没有了，想投稿功能的往下看~~
 
