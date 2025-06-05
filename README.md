@@ -1,7 +1,7 @@
 <div align="center">
 <img src="/images/ena_qute_head.png" alt="icon" width="150px"/>
 <h1 align="center">Shinonome Ena</h1>
-<img src="/images/ena.jpg" alt="icon" width="150px"/>
+<img src="/images/ena.jpg" alt="icon" width="500px"/>
 <h3 align="center">しののめ えなです!</h3>
 
 [![nonebot2](https://img.shields.io/static/v1?label=nonebot&message=v2.4.2&color=red)](https://v2.nonebot.dev/)
