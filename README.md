@@ -14,11 +14,33 @@
 
 ## 人设原型
 
-Shinonome Ena/东云绘名（東雲 絵名，しののめ えな）
+[しののめ えな](https://mzh.moegirl.org.cn/%E4%B8%9C%E4%BA%91%E7%BB%98%E5%90%8D "萌娘百科")（ Shinonome Ena，東雲 絵名，东云绘名 ），是 [Project SEKAI](https://pjsekai.sega.jp)（ PJSK，世界计划 ）及其衍生作品的登场角色。
 
-[《プロセカ》](https://www.colorfulstage.com)（Project SEKAI, PJSK）及其衍生作品的登场角色。
+代表色为 #CCAA88
 
-代表色为#ccaa88。
+## 游戏官网
+
+>日服
+
+- [プロジェクトセカイカラフルステージ！ feat. 初音ミク](https://pjsekai.sega.jp "日服官网")
+
+>台服
+
+- [世界計畫繽紛舞台！feat. 初音未來](https://www.tw-pjsekai.com "台服官网")
+
+>国际服
+
+- [HATSUNE MIKU: COLORFUL STAGE!](https://www.colorfulstage.com "国际服官网")
+
+>韩服
+
+- [프로젝트 세카이 컬러풀 스테이지! feat.하츠네 미쿠](https://www.kr-pjsekai.com "韩服官网")
+
+>国服
+
+- [初音未来：缤纷舞台](https://pjsk.nvsgames.cn "国服官网")
+
+~~什么五服临门~~
 
 ## Bot框架
 
@@ -34,7 +56,7 @@ Shinonome Ena，使用跨平台 Python 异步机器人框架 nonebot 作为后�
 
 ### ENA_2
 
->负责 Shinonome Ena 的全局群聊白名单、AI聊天白名单、用户黑名单管理，以及 [Haruki Bot](https://docs.haruki.seiunx.com) 的收发
+>负责 Shinonome Ena 的群聊授权、全局群聊白名单、AI聊天白名单、用户黑名单管理，以及 [Haruki Bot](https://docs.haruki.seiunx.com) 的收发、黑白名单管理
 
 ## 玩法列表
 
@@ -74,4 +96,7 @@ Shinonome Ena，使用跨平台 Python 异步机器人框架 nonebot 作为后�
 
 - 邮箱：<asahina_127@qq.com>
 
-- Twitter：~~不想公开捏~~ 你话真多
+- Twitter：~~不想公开捏~~
+
+    ~~你到底想怎样~~ 你话真多
+
