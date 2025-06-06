@@ -14,7 +14,7 @@
 
 ## 人设原型
 
-[しののめ えな](https://mzh.moegirl.org.cn/%E4%B8%9C%E4%BA%91%E7%BB%98%E5%90%8D "萌娘百科")（ Shinonome Ena，東雲 絵名，东云绘名 ），是 [Project SEKAI](https://pjsekai.sega.jp)（ PJSK，世界计划 ）及其衍生作品的登场角色。
+[しののめ えな](https://mzh.moegirl.org.cn/%E4%B8%9C%E4%BA%91%E7%BB%98%E5%90%8D "萌娘百科")（ Shinonome Ena，東雲 絵名，东云绘名 ），是 [Project SEKAI](https://mzh.moegirl.org.cn/%E4%B8%96%E7%95%8C%E8%AE%A1%E5%88%92_%E5%BD%A9%E8%89%B2%E8%88%9E%E5%8F%B0_feat._%E5%88%9D%E9%9F%B3%E6%9C%AA%E6%9D%A5 "萌娘百科")（ PJSK，世界计划 ）及其衍生作品的登场角色。
 
 代表色为 #CCAA88
 
