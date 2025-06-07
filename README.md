@@ -4,10 +4,10 @@
 <img src="/images/ena.jpg" alt="icon" width="450px"/>
 <h3 align="center">しののめ えなです!</h3>
 
-[![nonebot2](https://img.shields.io/static/v1?label=nonebot&message=v2.4.2&color=red)](https://v2.nonebot.dev/)
-[![onebot](https://img.shields.io/static/v1?label=adapters&message=onebot&color=green)](https://onebot.adapters.nonebot.dev/)
-[![onebot 11](https://img.shields.io/static/v1?label=onebot&message=v11&color=white)](https://11.onebot.dev)
-[![python](https://img.shields.io/static/v1?label=python&message=3.13.2&color=blue)](https://docs.python.org/zh-cn/3.13)
+[![nonebot v2.4.2](https://img.shields.io/static/v1?label=nonebot&message=v2.4.2&color=red)](https://v2.nonebot.dev)
+[![adapters：onebot](https://img.shields.io/static/v1?label=adapters&message=onebot&color=green)](https://onebot.adapters.nonebot.dev)
+[![onebot v11](https://img.shields.io/static/v1?label=onebot&message=v11&color=white)](https://11.onebot.dev)
+[![python 3.13.2](https://img.shields.io/static/v1?label=python&message=3.13.2&color=blue)](https://docs.python.org/zh-cn/3.13)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
 </div>
@@ -22,23 +22,23 @@
 
 >日服
 
-- [プロジェクトセカイカラフルステージ！ feat. 初音ミク](https://pjsekai.sega.jp "日服官网")
+- [プロジェクトセカイカラフルステージ！ feat. 初音ミク](https://pjsekai.sega.jp "日服官网，发布时间：2020年9月30日")
 
 >台服
 
-- [世界計畫繽紛舞台！feat. 初音未來](https://www.tw-pjsekai.com "台服官网")
+- [世界計畫繽紛舞台！feat. 初音未來](https://www.tw-pjsekai.com "台服官网，发布时间：2021年9月30日")
 
 >国际服
 
-- [HATSUNE MIKU: COLORFUL STAGE!](https://www.colorfulstage.com "国际服官网")
+- [HATSUNE MIKU: COLORFUL STAGE!](https://www.colorfulstage.com "国际服官网，发布时间：2021年12月7日")
 
 >韩服
 
-- [프로젝트 세카이 컬러풀 스테이지! feat.하츠네 미쿠](https://www.kr-pjsekai.com "韩服官网")
+- [프로젝트 세카이 컬러풀 스테이지! feat.하츠네 미쿠](https://www.kr-pjsekai.com "韩服官网，发布时间：2022年5月20日")
 
 >国服
 
-- [初音未来：缤纷舞台](https://pjsk.nvsgames.cn "国服官网")
+- [初音未来：缤纷舞台](https://pjsk.nvsgames.cn "国服官网，发布时间：2025年3月27日")
 
 ~~什么五服临门~~
 
@@ -52,7 +52,7 @@ Shinonome Ena，使用跨平台 Python 异步机器人框架 nonebot 作为后�
 
 ### ENA_1
 
->负责下文提到的 Shinonome Ena 玩法列表中的绝大部分功能
+>负责下文提到的 Shinonome Ena [玩法列表](#玩法列表) 中的绝大部分功能
 
 ### ENA_2
 
