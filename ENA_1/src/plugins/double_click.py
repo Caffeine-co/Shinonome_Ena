@@ -61,7 +61,7 @@ async def handle_poke(event: PokeNotifyEvent):
         elif random_num == 4:
             message = MessageSegment.text("哎，不想上学")
         else:
-            image_dir = "Your_bot_project_absolute_path/src/plugins/image/"
+            image_dir = "C:/QQbot/ENANA/src/plugins/image/"
 
             try:
                 image_files = [

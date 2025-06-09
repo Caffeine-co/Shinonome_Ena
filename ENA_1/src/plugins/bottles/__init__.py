@@ -16,14 +16,13 @@ from nonebot.adapters.onebot.v11 import (
 )
 from nonebot.params import EventPlainText, RegexGroup
 
-# ========== 权限配置 ==========
-WHITELIST_PATH = Path("Your_bot_project_absolute_path/src/plugins/group_whitelist.json")
-BLACKLIST_PATH = Path("Your_bot_project_absolute_path/src/plugins/user_blacklist.json")
-ADMIN_GROUP_ID = Your_own_dev_group_number
-ADMIN_QQ = Your_own_qq_number
+WHITELIST_PATH = Path("***/ENA_1/src/plugins/group_whitelist.json")
+BLACKLIST_PATH = Path("***/ENA_1/src/plugins/user_blacklist.json")
+ADMIN_GROUP_ID = Your_test_group_number
+ADMIN_QQ = Your_qq_number
 BOTTLE_FILE = Path(__file__).parent / "bottles.json"
 MAX_DAILY_LIMIT = 1
-EXEMPT_USER_ID = "Your_own_qq_number"
+EXEMPT_USER_ID = "Your_qq_number"
 DATA_FILE = Path(__file__).parent / "usage_data_bottles.json"
 
 async def check_group_whitelist(group_id: int) -> bool:
@@ -98,6 +97,7 @@ pick_bottle = on_fullmatch("捡漂流瓶")
 delete_bottle = on_regex(r"^删除漂流瓶(\d+)$")
 view_bottle = on_regex(r"^查看漂流瓶(\d*)$")
 
+
 async def read_bottles() -> List[Optional[Dict]]:
     if not os.path.exists(BOTTLE_FILE):
         return []
@@ -126,6 +126,7 @@ async def save_bottle(data: Dict) -> Tuple[int, bool]:
     bottles.append(data)
     await write_bottles(bottles)
     return len(bottles), True
+
 
 @throw_bottle.handle()
 async def throw_start(event: GroupMessageEvent):
@@ -190,7 +191,8 @@ async def throw_get_content(
 
     reply = f"漂流瓶No.{bottle_id}已扔进空无一人的湖中"
     await throw_bottle.finish(MessageSegment.reply(event.message_id) + reply)
-
+    
+    
 @pick_bottle.handle()
 async def pick_process(bot: Bot, event: GroupMessageEvent):
     if not await check_group_whitelist(event.group_id):
@@ -257,6 +259,7 @@ async def pick_process(bot: Bot, event: GroupMessageEvent):
             messages=msg
         )
 
+
 @delete_bottle.handle()
 async def delete_process(
         bot: Bot,
@@ -292,12 +295,14 @@ async def delete_process(
         MessageSegment.reply(event.message_id) + f"Ena已帮你删除漂流瓶No.{bottle_id}"
     )
 
+
 @view_bottle.handle()
 async def view_bottle_process(bot: Bot, event: MessageEvent, reg: Tuple[str, ...] = RegexGroup()):
     if not await check_group_whitelist(event.group_id):
         return
     if await check_user_blacklist(event.user_id):
         return
+
 
     bottle_id_str = reg[0]
     user_id = event.user_id
@@ -379,7 +384,7 @@ async def view_bottle_process(bot: Bot, event: MessageEvent, reg: Tuple[str, ...
                     group_id=event.group_id,
                     messages=msg
                 )
-                
+
         except ValueError:
             await view_bottle.finish("请输入有效的漂流瓶编号", reply_message=True)
 
@@ -389,7 +394,7 @@ async def view_bottle_process(bot: Bot, event: MessageEvent, reg: Tuple[str, ...
 
         user_id = event.user_id
         nickname = event.sender.card or event.sender.nickname
-        
+
         msg = []
 
         user_info = f"昵称：{nickname}\nQQ：{user_id}"

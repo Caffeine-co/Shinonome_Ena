@@ -50,11 +50,11 @@ async def handle_chooser(event: GroupMessageEvent):
         return
 
     msg = event.get_plaintext().strip()
-
+    
     match = re.match(r"^(.+?)还是(.+?)$", msg)
     if not match:
         return
-
+    
     option1 = match.group(1).strip()
     option2 = match.group(2).strip()
     option3 = "全都要"

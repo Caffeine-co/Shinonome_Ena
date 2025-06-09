@@ -2,21 +2,24 @@ import aiofiles
 import asyncio
 import json
 import os
-from nonebot import on_command
-from nonebot.adapters.onebot.v11 import GroupMessageEvent, Message
+import requests
+from nonebot import on_command, on_fullmatch
+from nonebot.adapters.onebot.v11 import GroupMessageEvent, Message, MessageSegment
+from nonebot.exception import FinishedException
 from nonebot.log import logger
 from nonebot.rule import Rule
 from collections import defaultdict
 from openai import OpenAI
 from pathlib import Path
 
-API_KEY = "Your_API_key"
+API_KEY = "Your_deepseek_api_key"
 BASE_URL = "https://api.deepseek.com/v1"
 MODEL_NAME = "deepseek-chat"
+BALANCE_QUART_URL = "https://api.deepseek.com/user/balance"
 
 AICHAT_WHITELIST_PATH = Path(__file__).parent / "aichat_group_whitelist.json"
-WHITELIST_PATH = Path("Your_bot_project_absolute_path/src/plugins/group_whitelist.json")
-BLACKLIST_PATH = Path("Your_bot_project_absolute_path/src/plugins/user_blacklist.json")
+WHITELIST_PATH = Path("***/ENA_1/src/plugins/group_whitelist.json")
+BLACKLIST_PATH = Path("***/ENA_1/src/plugins/user_blacklist.json")
 
 async def check_group_whitelist(group_id: int) -> bool:
     try:
@@ -77,6 +80,7 @@ ai_chat = on_command(
     "ena",
     aliases={"enana", "绘名", "东云绘名", "饿娜娜", "恶娜娜"}
 )
+balance_query = on_fullmatch(("查ena余额","查ENA余额","查api余额","查API余额"))
 
 conversation_histories = defaultdict(list)
 conversation_locks = defaultdict(asyncio.Lock)
@@ -150,3 +154,70 @@ def sync_api_call(messages: list) -> str:
     except Exception as e:
         logger.error(f"API处理失败: {str(e)}")
         return "API处理失败"
+
+
+
+@balance_query.handle()
+async def handle_balance_query(event: GroupMessageEvent):
+    if not await check_group_whitelist(event.group_id):
+        return
+    
+    if not await check_ai_group_whitelist(event.group_id):
+        return
+
+    if await check_user_blacklist(event.user_id):
+        return
+
+    api_key = API_KEY
+    if not api_key:
+        await balance_query.finish("未配置API key")
+
+    url = BALANCE_QUART_URL
+    headers = {
+        'Accept': 'application/json',
+        'Authorization': f'Bearer {api_key}'
+    }
+
+    try:
+        response = requests.get(url, headers=headers, timeout=10)
+        response.raise_for_status()
+
+        data = response.json()
+
+        if not data.get("is_available", False):
+            await balance_query.finish("账户不可用或未激活")
+
+        balance_info = data["balance_infos"][0]
+        currency = balance_info["currency"]
+        total = balance_info["total_balance"]
+        granted = balance_info["granted_balance"]
+        topped_up = balance_info["topped_up_balance"]
+
+        msg = f"🎨ENA余额信息🎨\n" \
+              f"• 货币类型: {currency}\n" \
+              f"• 充值余额: {topped_up}\n" \
+              f"• 赠送余额: {granted}\n" \
+              f"• 总余额: {total}"
+
+        await balance_query.finish(
+            MessageSegment.reply(event.message_id) + msg
+        )
+
+
+    except requests.exceptions.RequestException as e:
+        await balance_query.send(
+            MessageSegment.reply(event.message_id) + f"网络请求失败: {str(e)}"
+        )
+
+    except (KeyError, IndexError):
+        await balance_query.send(
+            MessageSegment.reply(event.message_id) + "API响应格式异常，无法解析数据"
+        )
+
+    except FinishedException:
+        pass
+
+    except Exception as e:
+        await balance_query.send(
+            MessageSegment.reply(event.message_id) + f"发生未知错误: {str(e)}"
+        )

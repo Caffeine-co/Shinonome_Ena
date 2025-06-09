@@ -18,14 +18,14 @@ from nonebot_plugin_apscheduler import scheduler
 
 CHARACTER_IMAGE_DIR = Path(__file__).parent / "characters"
 TEMP_DIR = Path(__file__).parent / "temp"
-WHITELIST_PATH = Path("Your_bot_project_absolute_path/src/plugins/group_whitelist.json")
-BLACKLIST_PATH = Path("Your_bot_project_absolute_path/src/plugins/user_blacklist.json")
+WHITELIST_PATH = Path("***/ENA_1/src/plugins/group_whitelist.json")
+BLACKLIST_PATH = Path("***/ENA_1/src/plugins/user_blacklist.json")
 TIMEOUT = 30
 ANSWER_RETENTION = TIMEOUT + 10
 TRIGGER_KEYWORD = "猜卡面"
 
 MAX_DAILY_LIMIT = 10
-EXEMPT_USER_ID = "Your_own_qq_number"
+EXEMPT_USER_ID = "Your_qq_number"
 DATA_FILE = Path(__file__).parent / "usage_data_guesscard.json"
 
 TEMP_DIR.mkdir(parents=True, exist_ok=True)
@@ -97,6 +97,7 @@ async def check_usage(user_id: str):
 sessions = {}
 
 message_id_to_answer = {}
+
 
 def get_character_info(character_dir: Path) -> tuple[str, list[str]]:
     json_path = character_dir / f"{character_dir.name}.json"
@@ -226,7 +227,7 @@ async def handle_trigger(bot: Bot, event: GroupMessageEvent):
 
     if await check_user_blacklist(event.user_id):
         return
-
+    
     user_id = event.get_user_id()
     if not (await check_usage(user_id)):
         await trigger_matcher.finish(

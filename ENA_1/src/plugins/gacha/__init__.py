@@ -17,12 +17,12 @@ from PIL import Image
 
 logger = logging.getLogger(__name__)
 
-WHITELIST_PATH = Path("Your_bot_project_absolute_path/src/plugins/group_whitelist.json")
-BLACKLIST_PATH = Path("Your_bot_project_absolute_path/src/plugins/user_blacklist.json")
+WHITELIST_PATH = Path("***/ENA_1/src/plugins/group_whitelist.json")
+BLACKLIST_PATH = Path("***/ENA_1/src/plugins/user_blacklist.json")
 
 DATA_FILE = Path(__file__).parent / "usage_data_gacha.json"
 MAX_DAILY_LIMIT = 50
-EXEMPT_USER_ID = "Your_own_qq_number"
+EXEMPT_USER_ID = "Your_qq_number"
 
 BG_PATH = Path(__file__).parent / "gacha_resources/背景图"
 
@@ -38,6 +38,7 @@ LIM_TWO_STAR_PATH = Path(__file__).parent / "gacha_resources/限定池/二星卡
 TEMP_PATH = Path(__file__).parent / "temp"
 
 TEMP_PATH.mkdir(parents=True, exist_ok=True)
+
 
 async def check_group_whitelist(group_id: int) -> bool:
     try:
@@ -137,8 +138,8 @@ async def check_usage_one(user_id: str):
     return True
 
 PROBABILITY = {
-    "4star": 0.02,
-    "3star": 0.08,
+    "4star": 0.03,
+    "3star": 0.07,
     "2star": 0.90
 }
 

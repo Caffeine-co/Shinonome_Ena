@@ -554,7 +554,9 @@ async def main(bot: Bot, ev: MessageEvent):
     text = "\
 ⭕以指定称呼为开头进行触发\n\
     称呼列表：“ena”、“enana”、“绘名”、“东云绘名”、“饿娜娜”、“恶娜娜”\n\
-    例：ena，你该起床了\n\
+    例：ena，你该起床了\n\n\
+⭕[查ena余额]\n\
+    查询ENA所使用的deepseek API余额信息\n\
 "
 
     msg.append({
@@ -569,7 +571,7 @@ async def main(bot: Bot, ev: MessageEvent):
     text = "\
 🎨注意事项🎨\n\
 • 若要使用ai聊天请携带群聊联系bot主进行评估\n\
-• 该玩法需调用deepseek的API，需要进行收费，故聊天请勿上头\n\
+• 该玩法需调用deepseek的API，需要进行收费，聊天请勿上头\n\
 • 由于deepseek官方的API未提供联网，实际聊天会出现部分信息与现实生活不符，属正常情况\n\
 • 使用时请勿输入不宜内容或敏感信息，提醒后毫无悔改者做全局拉黑处理\n\
 "
