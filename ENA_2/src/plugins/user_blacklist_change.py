@@ -12,7 +12,7 @@ global_config = get_driver().config
 admin_id = int(global_config.admin_id)
 auth_group = int(global_config.auth_group)
 
-BLACKLIST_PATH = Path("Your_ena_1_bot_project_absolute_path/src/plugins/user_blacklist.json")
+BLACKLIST_PATH = Path("***/ENA_1/src/plugins/user_blacklist.json")
 
 if not BLACKLIST_PATH.exists():
     BLACKLIST_PATH.write_text("[]", encoding='utf-8')

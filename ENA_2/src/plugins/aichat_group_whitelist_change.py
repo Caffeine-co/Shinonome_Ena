@@ -11,7 +11,7 @@ from nonebot.permission import SUPERUSER
 global_config = get_driver().config
 admin_id = int(global_config.admin_id)
 
-AICHAT_WHITELIST_PATH = Path("Your_ena_1_bot_project_absolute_path/src/plugins/aichat/aichat_group_whitelist.json")
+AICHAT_WHITELIST_PATH = Path("***/ENA_1/src/plugins/aichat/aichat_group_whitelist.json")
 
 if not AICHAT_WHITELIST_PATH.exists():
     AICHAT_WHITELIST_PATH.write_text("[]", encoding='utf-8')
@@ -70,7 +70,7 @@ async def unified_manager_handler(
         msg: str = EventPlainText()
 ):
     if apply_match := re.match(r"^开启ai聊天\s*(\d+)$", msg.strip()):
-
+        
         if event.user_id != admin_id:
             return
 

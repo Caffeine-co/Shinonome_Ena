@@ -12,7 +12,7 @@ global_config = get_driver().config
 admin_id = int(global_config.admin_id)
 auth_group = int(global_config.auth_group)
 
-WHITELIST_PATH = Path("Your_ena_1_bot_project_absolute_path/src/plugins/group_whitelist.json")
+WHITELIST_PATH = Path("***/ENA_1/src/plugins/group_whitelist.json")
 
 if not WHITELIST_PATH.exists():
     WHITELIST_PATH.write_text("[]", encoding='utf-8')
