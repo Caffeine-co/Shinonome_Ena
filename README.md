@@ -64,7 +64,7 @@
 
 </details>
 <details>
-<summary><strong style="font-size:150%">v-0.x.x</strong></summary>
+<summary><strong style="font-size:200%">v-0.x.x</strong></summary>
 
 ### `v-0.0.0` —— 2025.01.25
 - 项目进程启动
@@ -80,7 +80,7 @@
 
 </details>
 <details>
-<summary><strong style="font-size:150%">v-1.x.x</strong></summary>
+<summary><strong style="font-size:200%">v-1.x.x</strong></summary>
 
 ### `v-1.0.0` —— 2025.02.10
 - Shinonome Ena 正式投入使用
@@ -113,7 +113,7 @@
 
 </details>
 <details>
-<summary><strong style="font-size:150%">v-2.x.x</strong></summary>
+<summary><strong style="font-size:200%">v-2.x.x</strong></summary>
 
 ### `v-2.0.0` —— 2025.04.07
 - 新增群聊授权、群聊白名单系统
@@ -137,7 +137,7 @@
 
 </details>
 <details>
-<summary><strong style="font-size:150%">v-3.x.x</strong></summary>
+<summary><strong style="font-size:200%">v-3.x.x</strong></summary>
 
 ### `v-3.0.0` —— 2025.05.05
 - 新增用户黑名单系统
