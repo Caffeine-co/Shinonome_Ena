@@ -20,6 +20,10 @@
 
 ## 🎨 游戏官网 🎨
 
+</details>
+<details>
+<summary><strong style="font-size:150%">点击展开</strong></summary>
+
 >**日服**
 
 - [プロジェクトセカイカラフルステージ！ feat. 初音ミク](https://pjsekai.sega.jp "日服官网，发布时间：2020年9月30日")
@@ -41,18 +45,7 @@
 - [初音未来：缤纷舞台](https://pjsk.nvsgames.cn "国服官网，发布时间：2025年3月27日")
 
 ~~什么五服临门~~
-
-## 🎨 功能划分 🎨
-
-### 📁 ENA_1
-
->Shinonome Ena [玩法列表](#-玩法列表-) 中的绝大部分功能
-
-### 📁 ENA_2
-
->Shinonome Ena 的群聊授权、群聊白名单管理、AI聊天白名单管理、用户黑名单管理
-
->Haruki Bot 的收发、黑白名单管理（ Haruki Bot 不属于本项目内容，不作展示）
+</details>
 
 ## 🎨 框架使用 🎨
 
@@ -60,12 +53,56 @@
 
 ~~有趣味性吗，没感觉到耶~~
 
+## 🎨 项目结构 🎨
+### 🎨 ENA_1
+```tree
+📁ENA_1/
+├── 📁 .venv
+├── 📁 src/
+│   └── 📁 plugins
+├── 📁 backgroundpic
+├── 📄 .env
+├── 📄 .env.dev
+├── 📄 .env.prod
+├── 📄 .gitignore
+├── 📄 pyproject.toml
+└── 📄 README.md
+```
+### 🎨 ENA_2
+```tree
+📁ENA_2/
+├── 📁 .venv
+├── 📁 src/
+│   └── 📁 plugins
+├── 📄 .env
+├── 📄 .env.dev
+├── 📄 .env.prod
+├── 📄 .gitignore
+├── 📄 pyproject.toml
+└── 📄 README.md
+```
+此处展示结构为使用 `nb-cli` 进行快速创建的 **nonebot** 项目结构
+
+## 🎨 功能划分 🎨
+
+### 🎨 ENA_1
+
+>Shinonome Ena [玩法列表](#-玩法列表-) 中的绝大部分功能
+
+### 🎨 ENA_2
+
+>Shinonome Ena 的群聊授权、群聊白名单管理、AI聊天白名单管理、用户黑名单管理
+
+>Haruki Bot 的收发、黑白名单管理（ Haruki Bot 不属于本项目内容，不作展示）
+
 ## 🎨 开发日志 🎨
 
 </details>
 <details>
 <summary><strong style="font-size:150%">v-3.x.x</strong></summary>
 
+#### `v-3.9.1` —— 2025.06.13
+- 拓展头像双击玩法回应内容
 #### `v-3.9.0` —— 2025.06.11
 - 新增清除ai聊天历史对话功能
 #### `v-3.8.0` —— 2025.06.08
