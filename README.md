@@ -20,10 +20,6 @@
 
 ## 🎨 游戏官网 🎨
 
-</details>
-<details>
-<summary><strong style="font-size:150%">点击展开</strong></summary>
-
 >**日服**
 
 - [プロジェクトセカイカラフルステージ！ feat. 初音ミク](https://pjsekai.sega.jp "日服官网，发布时间：2020年9月30日")
@@ -45,7 +41,6 @@
 - [初音未来：缤纷舞台](https://pjsk.nvsgames.cn "国服官网，发布时间：2025年3月27日")
 
 ~~什么五服临门~~
-</details>
 
 ## 🎨 框架使用 🎨
 
