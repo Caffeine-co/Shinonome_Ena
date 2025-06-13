@@ -1,12 +1,12 @@
 import json
 import re
 from pathlib import Path
-from typing import Optional
 import aiofiles
 from nonebot import get_driver, on_message, on_fullmatch
-from nonebot.adapters.onebot.v11 import Bot, GroupMessageEvent, Message
+from nonebot.adapters.onebot.v11 import Bot, GroupMessageEvent, Message, ActionFailed
+from nonebot.exception import MatcherException
 from nonebot.params import EventPlainText
-from nonebot.permission import SUPERUSER
+from typing import Union
 
 global_config = get_driver().config
 admin_id = int(global_config.admin_id)
@@ -18,12 +18,12 @@ if not WHITELIST_PATH.exists():
     WHITELIST_PATH.write_text("[]", encoding='utf-8')
 
 manager = on_message(block=True)
-query_auth = on_message(block=True, rule=lambda event: event.group_id == auth_group)
+query_auth = on_message(block=True, rule=lambda event: event.group_id == auth_group)  # 仅在授权群生效
 query_current = on_fullmatch("查询授权")
-change_owner = on_message(block=True, rule=lambda event: event.user_id == admin_id)
+change_owner = on_message(block=True, rule=lambda event: event.user_id == admin_id)  # 直接整合管理员验证
 
 
-async def update_whitelist(group_id: int, operation: str, user_id: int) -> bool:
+async def update_whitelist(group_id: int, operation: str, user_id: int) -> Union[str, bool]:
     try:
         async with aiofiles.open(WHITELIST_PATH, 'r', encoding='utf-8') as f:
             content = await f.read()
@@ -83,14 +83,34 @@ async def unified_manager_handler(
         try:
             group_list = await bot.get_group_list()
             if group_id not in {g["group_id"] for g in group_list}:
-                await manager.finish(f"🎨授权失败啦，可能是未入群 {group_id} 捏")
+                await manager.finish(f"🎨授权失败啦，可能是未入群 {group_id} 呢")
         except:
             return
+
+        try:
+            member_info = await bot.get_group_member_info(
+                group_id=group_id,
+                user_id=user_id,
+                no_cache=True
+            )
+            role = member_info.get("role", "")
+            if role not in ["owner", "admin"]:
+                await manager.finish("🎨授权失败啦，只有群主或管理员才能申请授权呢")
+
+        except ActionFailed as e:
+            print(f"权限验证失败: {e}")
+            await manager.finish("🎨权限验证失败：请确保能获取成员信息")
+        except MatcherException:
+            raise
+        except Exception as e:
+            print(f"权限验证异常: {e}")
+            await manager.finish("🎨权限验证时发生未知错误")
 
         result = await update_whitelist(group_id, "add", user_id)
 
         if result == "added":
-            await manager.finish(Message(f"🎨群聊 {group_id} 授权成功咯！\n🎨领养人：{user_id}\n🎨领养人请不要退出本群和所授权的群哟~"))
+            await manager.finish(
+                Message(f"🎨群聊 {group_id} 授权成功咯！\n🎨领养人：{user_id}\n🎨领养人请不要退出本群和所授权的群哟~"))
         elif result == "duplicate":
             whitelist = await load_whitelist()
             entry = next(x for x in whitelist if x["group_id"] == group_id)
@@ -111,6 +131,7 @@ async def unified_manager_handler(
             await manager.finish(f"🎨群 {group_id} 未授权")
         else:
             await manager.finish("取消授权失败，请检查群号或文件权限")
+
 
 @query_auth.handle()
 async def handle_query_auth(event: GroupMessageEvent, msg: str = EventPlainText()):
@@ -162,7 +183,6 @@ async def handle_change_owner(
 
         if not target:
             await change_owner.finish(f"🎨群聊 {group_id} 还没有授权，无法更换领养人哦")
-            return
 
         try:
             target["user_id"] = new_user
@@ -170,9 +190,8 @@ async def handle_change_owner(
                 await f.write(json.dumps(whitelist, indent=4))
         except Exception as e:
             print(f"领养人更换失败: {str(e)}")
-            await change_owner.finish("领养人更换失败，请检查文件权限")
-            return
 
         await change_owner.finish(
-            Message(f"🎨领养人更换成功啦！\n🎨群号：{group_id}\n🎨新领养人：{new_user}\n🎨请新领养人请不要退出本群和所授权的群哟~")
+            Message(
+                f"🎨领养人更换成功啦！\n🎨群号：{group_id}\n🎨新领养人：{new_user}\n🎨请新领养人请不要退出本群和所授权的群哟~")
         )

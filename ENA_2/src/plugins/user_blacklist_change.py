@@ -1,12 +1,10 @@
 import json
 import re
 from pathlib import Path
-from typing import Optional
 import aiofiles
 from nonebot import get_driver, on_message, on_regex
 from nonebot.adapters.onebot.v11 import Bot, GroupMessageEvent, Message
 from nonebot.params import EventPlainText
-from nonebot.permission import SUPERUSER
 
 global_config = get_driver().config
 admin_id = int(global_config.admin_id)
@@ -99,7 +97,6 @@ async def handle_query(event: GroupMessageEvent, msg: str = EventPlainText()):
 
     if not target_id:
         await query_blacklist.finish()
-        return
 
     user_id = int(target_id)
     blacklist = await get_blacklist()

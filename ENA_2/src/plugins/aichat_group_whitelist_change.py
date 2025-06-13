@@ -1,12 +1,11 @@
 import json
 import re
 from pathlib import Path
-from typing import Optional
 import aiofiles
-from nonebot import get_driver, on_message, on_fullmatch
+from nonebot import get_driver, on_message
 from nonebot.adapters.onebot.v11 import Bot, GroupMessageEvent, Message
 from nonebot.params import EventPlainText
-from nonebot.permission import SUPERUSER
+from typing import Union
 
 global_config = get_driver().config
 admin_id = int(global_config.admin_id)
@@ -19,7 +18,7 @@ if not AICHAT_WHITELIST_PATH.exists():
 manager = on_message(block=True)
 
 
-async def update_whitelist(group_id: int, operation: str, user_id: int) -> bool:
+async def update_whitelist(group_id: int, operation: str, user_id: int) -> Union[str, bool]:
     try:
         async with aiofiles.open(AICHAT_WHITELIST_PATH, 'r', encoding='utf-8') as f:
             content = await f.read()
@@ -70,7 +69,6 @@ async def unified_manager_handler(
         msg: str = EventPlainText()
 ):
     if apply_match := re.match(r"^开启ai聊天\s*(\d+)$", msg.strip()):
-        
         if event.user_id != admin_id:
             return
 
