@@ -6,8 +6,9 @@ from pathlib import Path
 from nonebot import on_notice
 from nonebot.adapters.onebot.v11 import PokeNotifyEvent, MessageSegment
 
-WHITELIST_PATH = Path(__file__).parent / "group_whitelist.json"
-BLACKLIST_PATH = Path(__file__).parent / "user_blacklist.json"
+WHITELIST_PATH = Path("***/ENA_1/src/plugins/group_whitelist.json")
+BLACKLIST_PATH = Path("***/ENA_1/src/plugins/user_blacklist.json")
+
 
 async def check_group_whitelist(group_id: int) -> bool:
     try:
@@ -50,18 +51,21 @@ async def handle_poke(event: PokeNotifyEvent):
         if await check_user_blacklist(event.user_id):
             return
 
-        random_num = random.randint(1, 8)
+        random_num = random.randint(1, 3)
 
         if random_num == 1:
-            message = MessageSegment.text("Akito!")
+
+            option1 = "Akito!"
+            option2 = "还我松饼！"
+            option3 = "还我芝士蛋糕！"
+            option4 = "哎，不想上学"
+
+            result = random.choice([option1, option2, option3, option4])
+
+            message = MessageSegment.text(f"{result}")
+
         elif random_num == 2:
-            message = MessageSegment.text("还我松饼！")
-        elif random_num == 3:
-            message = MessageSegment.text("还我芝士蛋糕！")
-        elif random_num == 4:
-            message = MessageSegment.text("哎，不想上学")
-        else:
-            image_dir = "C:/QQbot/ENANA/src/plugins/image/"
+            image_dir = Path(__file__).parent / "image/"
 
             try:
                 image_files = [
@@ -79,4 +83,23 @@ async def handle_poke(event: PokeNotifyEvent):
             except FileNotFoundError:
                 message = MessageSegment.text("找不到图片目录哦")
 
-        await poke_notice.send(message)
+        else:
+            voice_dir = Path(__file__).parent / "voice/"
+
+            try:
+                voice_files = [
+                    f for f in os.listdir(voice_dir)
+                    if os.path.isfile(os.path.join(voice_dir, f))
+                       and f.lower().endswith('wav')
+                ]
+
+                if voice_files:
+                    selected_voice = random.choice(voice_files)
+                    voice_path = os.path.join(voice_dir, selected_voice)
+                    message = MessageSegment.record(file=voice_path)
+                else:
+                    message = MessageSegment.text("文件不存在")
+            except FileNotFoundError:
+                message = MessageSegment.text("找不到文件目录")
+
+        await poke_notice.finish(message)
