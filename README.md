@@ -1,6 +1,6 @@
 <div align="center">
 <img src="https://raw.githubusercontent.com/Caffeine-co/Shinonome_Ena/main/images/ena_qute_head.png" alt="icon" width="150px"/>
-<h1 align="center">🎨 Shinonome Ena 🎨</h1>
+<h1 align="center">🎨 Shinonome Ena v-3.9.5🎨</h1>
 <img src="https://raw.githubusercontent.com/Caffeine-co/Shinonome_Ena/main//images/ena.jpg" alt="icon" width="450px"/>
 <h3 align="center">しののめ えなです!</h3>
 
