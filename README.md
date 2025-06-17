@@ -94,6 +94,16 @@
 
 </details>
 <details>
+<summary><strong style="font-size:150%">v-4.x.x</strong></summary>
+
+#### `v-4.0.0` —— 2025.06.18
+- 新增签到系统
+</details>
+
+
+
+</details>
+<details>
 <summary><strong style="font-size:150%">v-3.x.x</strong></summary>
 
 #### `v-3.9.5` —— 2025.06.15
@@ -203,6 +213,8 @@
 
 ### 可使用玩法
 
+- 签到
+
 - ai聊天
 
 - 漂流瓶
@@ -236,8 +248,6 @@
 ### 待添加玩法
 
 - 群老婆
-
-- 每日签到
 
 - 经验等级/好感度系统
 
