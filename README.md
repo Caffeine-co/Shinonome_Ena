@@ -96,6 +96,8 @@
 <details>
 <summary><strong style="font-size:150%">v-4.x.x</strong></summary>
 
+#### `v-4.0.1` —— 2025.06.23
+- 更新ai聊天的角色prompt
 #### `v-4.0.0` —— 2025.06.18
 - 新增签到系统
 </details>
