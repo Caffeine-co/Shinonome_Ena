@@ -10,7 +10,7 @@ from typing import Union
 global_config = get_driver().config
 admin_id = int(global_config.admin_id)
 
-AICHAT_WHITELIST_PATH = Path("***/ENA_1/src/plugins/aichat/aichat_group_whitelist.json")
+AICHAT_WHITELIST_PATH = Path("***/ENA_1/src/plugins/ena_system/resources/use_limit/aichat_group_whitelist.json")
 
 if not AICHAT_WHITELIST_PATH.exists():
     AICHAT_WHITELIST_PATH.write_text("[]", encoding='utf-8')
