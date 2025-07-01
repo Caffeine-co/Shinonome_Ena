@@ -1,6 +1,6 @@
 <div align="center">
 <img src="https://raw.githubusercontent.com/Caffeine-co/Shinonome_Ena/main/images/ena_qute_head.png" alt="icon" width="150px"/>
-<h1 align="center">🎨 Shinonome Ena v-3.9.5🎨</h1>
+<h1 align="center">🎨 Shinonome Ena v-4.5.0🎨</h1>
 <img src="https://raw.githubusercontent.com/Caffeine-co/Shinonome_Ena/main//images/ena.jpg" alt="icon" width="450px"/>
 <h3 align="center">しののめ えなです!</h3>
 
@@ -94,8 +94,29 @@
 
 </details>
 <details>
+<summary><strong style="font-size:150%">v-5.x.x</strong></summary>
+
+#### `v-5.0.0` —— 2025.06.18
+- 重构现有的自开发插件框架
+</details>
+
+
+
+</details>
+<details>
 <summary><strong style="font-size:150%">v-4.x.x</strong></summary>
 
+#### `v-4.5.0` —— 2025.06.29
+- 新增pjsk猜曲绘玩法并与pjsk猜卡面玩法合并
+#### `v-4.4.3` —— 2025.06.27
+- 优化pjsk猜卡面的插件代码
+#### `v-4.4.2` —— 2025.06.26
+- 修复签到系统初始等级换算问题
+#### `v-4.4.1` —— 2025.06.25
+- 修复生日招募统计错误的问题
+- 重构群聊白名单、ai聊天白名单、用户黑名单管理系统
+#### `v-4.1.0` —— 2025.06.24
+- 新增pjsk模拟招募玩法内容 —— 生日招募
 #### `v-4.0.1` —— 2025.06.23
 - 更新ai聊天的角色prompt
 #### `v-4.0.0` —— 2025.06.18
@@ -111,8 +132,8 @@
 #### `v-3.9.5` —— 2025.06.15
 - 优化ai聊天的插件代码
 #### `v-3.9.4` —— 2025.06.14
-- 修复猜卡面与ai聊天之间的事件处理阻断问题
-- 优化猜卡面、抽签的插件代码
+- 修复pjsk猜卡面与ai聊天之间的事件处理阻断问题
+- 优化pjsk猜卡面、抽签的插件代码
 #### `v-3.9.1` —— 2025.06.13
 - 拓展头像双击玩法回应内容
 #### `v-3.9.0` —— 2025.06.11
@@ -159,7 +180,7 @@
 - 新增pjsk模拟计算器玩法，初始内容为卡组倍率计算
 - 新增群聊授权查询功能
 #### `v-2.0.0` —— 2025.04.07
-- 新增群聊授权、群聊白名单系统
+- 新增群聊白名单授权系统
 </details>
 
 
@@ -217,17 +238,21 @@
 
 - 签到
 
-- ai聊天
+- AI聊天
 
 - 漂流瓶
 
 - 二选一
+
+- 头像双击
 
 - 属性鉴定
 
 - 每日抽签
 
 - pjsk猜卡面
+
+- pjsk猜曲绘
 
 - pjsk模拟招募
 
