@@ -20,7 +20,7 @@ from ._430_ import check_group_whitelist, check_user_blacklist, check_ai_group_w
 # --------------------------
 # 配置区域
 # --------------------------
-API_KEY = "sk-af1861cd5540421abc8f5215ffba286f"  # os.getenv("DEEPSEEK_API_KEY", "your_api_key_here")
+API_KEY = "sk-a****286f"  # os.getenv("DEEPSEEK_API_KEY", "your_api_key_here")
 BASE_URL = "https://api.deepseek.com/v1"
 MODEL_NAME = "deepseek-chat"  # deepseek-reasoner
 BALANCE_QUART_URL = "https://api.deepseek.com/user/balance"
