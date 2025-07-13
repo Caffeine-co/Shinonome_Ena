@@ -1,6 +1,6 @@
 <div align="center">
 <img src="https://raw.githubusercontent.com/Caffeine-co/Shinonome_Ena/main/images/ena_qute_head.png" alt="icon" width="150px"/>
-<h1 align="center">🎨 Shinonome Ena v-4.5.0🎨</h1>
+<h1 align="center">🎨 Shinonome Ena v-5.2.4🎨</h1>
 <img src="https://raw.githubusercontent.com/Caffeine-co/Shinonome_Ena/main//images/ena.jpg" alt="icon" width="450px"/>
 <h3 align="center">しののめ えなです!</h3>
 
@@ -96,8 +96,17 @@
 <details>
 <summary><strong style="font-size:150%">v-5.x.x</strong></summary>
 
+#### `v-5-4-0`
+- 修改已有的黑白名单相关的数据存储方式
+- 优化若干代码
+#### `v-5.2.4` —— 2025.07.09
+- 修改已有的用户使用次数的数据存储方式
+- 重构负责授权相关的自开发插件框架
+- 拓展头像双击玩法回应内容
+#### `v-5.1.0` —— 2025.07.05
+- 修改漂流瓶的数据存储方式
 #### `v-5.0.0` —— 2025.06.18
-- 重构现有的自开发插件框架
+- 重构除授权相关的自开发插件框架
 </details>
 
 
