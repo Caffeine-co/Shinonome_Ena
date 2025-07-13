@@ -1,7 +1,7 @@
 [project]
-name = "ENANA-2"
+name = "ENA_2"
 version = "0.1.0"
-description = "ENANA-2"
+description = "ENA_2"
 readme = "README.md"
 requires-python = ">=3.9, <4.0"
 

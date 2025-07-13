@@ -1,4 +1,4 @@
-# ENANA-2
+# ENA_2
 
 ## How to start
 
