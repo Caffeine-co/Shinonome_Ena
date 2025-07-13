@@ -8,7 +8,7 @@
 |  D     |  bottles       |  漂流瓶              |
 |  E     |  calculation   |  pjsk模拟计算器      |
 |  F     |  choose        |  二选一              |
-|  G     |  daily_sign    |  每日抽签            |
+|  G     |  daily_sign    |  每日签到            |
 |  H     |  double_click  |  头像双击            |
 |  I     |  draw_lots     |  每日抽签            |
 |  J     |  gacha         |  pjsk模拟招募        |

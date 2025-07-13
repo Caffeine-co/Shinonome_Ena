@@ -16,44 +16,36 @@ from openai import OpenAI
 from ._430_ import check_group_whitelist, check_user_blacklist, check_ai_group_whitelist
 
 
-
 # --------------------------
 # 配置区域
 # --------------------------
-API_KEY = "sk-a****286f"  # os.getenv("DEEPSEEK_API_KEY", "your_api_key_here")
+API_KEY = "sk-af186*******"
 BASE_URL = "https://api.deepseek.com/v1"
-MODEL_NAME = "deepseek-chat"  # deepseek-reasoner
+MODEL_NAME = "deepseek-chat"
 BALANCE_QUART_URL = "https://api.deepseek.com/user/balance"
 ADMIN_QQ = 2083909754
-
 
 
 # --------------------------
 # 函数定义
 # --------------------------
-# 日期时间功能函数
 def get_current_datetime(timezone: str = "Asia/Tokyo") -> str:
-    """获取指定时区的当前日期和时间"""
     try:
-        # 使用 pytz 替代 zoneinfo 以获得更好的兼容性
         tz = pytz.timezone(timezone)
     except pytz.UnknownTimeZoneError:
-        # 如果时区无效，使用东京时间作为默认值
         try:
             tz = pytz.timezone("Asia/Tokyo")
         except pytz.UnknownTimeZoneError:
-            tz = pytz.utc  # 最终回退到 UTC
+            tz = pytz.utc
 
     now = datetime.datetime.now(tz)
     return now.strftime("%Y-%m-%d %H:%M:%S %Z")
 
 
-# API调用函数
 def sync_api_call(messages: list) -> str:
     try:
         client = OpenAI(api_key=API_KEY, base_url=BASE_URL)
 
-        # 首次调用API
         response = client.chat.completions.create(
             model=MODEL_NAME,
             messages=messages,
@@ -67,14 +59,9 @@ def sync_api_call(messages: list) -> str:
         response_message = response.choices[0].message
         tool_calls = response_message.tool_calls
 
-        # 记录API响应
         logger.debug(f"API响应: {response_message}")
 
-        # 如果模型要求调用函数
         if tool_calls:
-            # 将模型的回复添加到消息历史中
-            # 构建正确的助手消息格式（包含tool_calls）
-            # 构建正确的assistant消息
             assistant_msg = {
                 "role": "assistant",
                 "content": response_message.content or "",
@@ -93,14 +80,12 @@ def sync_api_call(messages: list) -> str:
 
             messages.append(assistant_msg)
 
-            # 处理每个函数调用
             for tool_call in tool_calls:
                 function_name = tool_call.function.name
                 function_args = json.loads(tool_call.function.arguments)
 
                 logger.debug(f"调用函数: {function_name} with args: {function_args}")
 
-                # 调用实际函数
                 if function_name in available_functions:
                     try:
                         function_response = str(available_functions[function_name](**function_args))
@@ -111,7 +96,6 @@ def sync_api_call(messages: list) -> str:
 
                 logger.debug(f"函数响应: {function_response}")
 
-                # 将函数结果添加到消息历史中
                 messages.append({
                     "role": "tool",
                     "tool_call_id": tool_call.id,
@@ -119,7 +103,6 @@ def sync_api_call(messages: list) -> str:
                     "content": function_response,
                 })
 
-            # 第二次调用API，将函数结果传给模型
             second_response = client.chat.completions.create(
                 model=MODEL_NAME,
                 messages=messages,
@@ -129,19 +112,15 @@ def sync_api_call(messages: list) -> str:
             )
             return second_response.choices[0].message.content.strip()
 
-        # 没有函数调用时直接返回结果
         return response_message.content.strip()
 
     except Exception as e:
         logger.error(f"API处理失败: {str(e)}")
         return "API处理失败"
-        # return "我遇到了一些问题，请稍后再试"
-    # ====== 修改结束 ======
 
 
 async def call_deepseek_api(messages: list) -> str:
     try:
-        # 在异步环境中运行同步API调用
         return await asyncio.wait_for(
             asyncio.to_thread(sync_api_call, messages),
             timeout=TIMEOUT
@@ -151,11 +130,9 @@ async def call_deepseek_api(messages: list) -> str:
         raise
 
 
-
 # --------------------------
 # 可用函数工具定义
 # --------------------------
-# 更新函数描述以包含时区示例
 tools = [
     {
         "type": "function",
@@ -176,21 +153,18 @@ tools = [
     }
 ]
 
-# 函数名称到实际函数的映射
 available_functions = {
     "get_current_datetime": get_current_datetime,
 }
 
 
-
 # --------------------------
 # 参数配置区域
 # --------------------------
-MAX_HISTORY_ROUNDS = 3  # 硬编码保留3轮对话
+MAX_HISTORY_ROUNDS = 3
 MAX_TOKENS = 2048
-TIMEOUT = 60  # 增加超时时间以容纳搜索请求
+TIMEOUT = 60
 TEMPERATURE = 0.8
-
 
 
 # --------------------------
@@ -311,17 +285,12 @@ KAITO（kaito，kai）：有着深蓝色头发的男性歌手，身着蓝白相�
 "
 
 
-
 # --------------------------
 # 事件响应器
 # --------------------------
 ai_chat = on_command("ena", aliases={"enana", "绘名", "东云绘名", "饿娜娜", "恶娜娜", "董慧敏"}, priority=4)
-    #   rule=Rule(_group_check)
-    #   rule=Rule(_is_group)  # 新增规则
-    #   block=True,
 balance_query = on_fullmatch(("查ena余额", "查ENA余额", "查api余额", "查API余额"))
 reset_chat = on_fullmatch(("重置ENA对话", "清除ENA对话", "重置ena对话", "清除ena对话"))
-
 
 
 # --------------------------
@@ -331,100 +300,67 @@ conversation_histories = defaultdict(list)
 conversation_locks = defaultdict(asyncio.Lock)
 
 
-
 # --------------------------
 # 事件处理
 # --------------------------
 @ai_chat.handle()
-async def handle_chat_request(event: GroupMessageEvent):
-    # 白名单检查
+async def ai_chat_handler(event: GroupMessageEvent):
     if not await check_group_whitelist(event.group_id):
-        #   await reply_tester.finish("本群未授权")
         return
 
-    # ai聊天白名单检查
+    if await check_user_blacklist(event.user_id):
+        return
+
     if not await check_ai_group_whitelist(event.group_id):
         return
 
-    # 用户黑名单检查
-    if await check_user_blacklist(event.user_id):
-        #   await deepseek_chat.finish(Message([
-        #       MessageSegment.reply(event.message_id),
-        #       MessageSegment.text("您已被禁用Ena-bot")
-        #   ]))
-        return
-
-    # 获取完整的原始消息（包括命令部分）
     full_message = event.get_message()
     user_input = full_message.extract_plain_text().strip()
 
     group_id = event.group_id
 
-    # 如果用户只发送了命令没有内容
-    # if not user_input:
-    # 可以发送一个提示，或者使用默认内容
-    #    await deepseek_chat.finish("你好呀！有什么我可以帮你的吗？")
-    #    return
-
-    # 此时 user_input 永远不会为空，因为至少包含命令本身
-    # 例如：如果用户只发送 "/chat"，user_input = "/chat"
-
     async with conversation_locks[group_id]:
         try:
-            # 获取当前群组的对话历史
             history = conversation_histories[group_id]
 
-            # 如果是首次对话，添加系统提示
             if not history:
                 history.append({"role": "system", "content": SYSTEM_PROMPT})
 
-            # 添加包含命令的完整用户消息
             history.append({"role": "user", "content": user_input})
 
-            # 调用API获取回复
             response = await call_deepseek_api(history)
 
-            # 添加AI回复到历史
             history.append({"role": "assistant", "content": response})
 
-            # 修剪历史记录 (系统提示 + 最近3轮对话)
-            while len(history) > 1 + MAX_HISTORY_ROUNDS * 2:  # 1(系统) + 3轮*(用户+AI)
-                # 保留系统提示，移除最早的对话轮次
-                history.pop(1)  # 移除最早的用户消息
-                history.pop(1)  # 移除对应的AI回复
+            while len(history) > 1 + MAX_HISTORY_ROUNDS * 2:
+                history.pop(1)
+                history.pop(1)
 
             await ai_chat.send(response)
 
         except asyncio.TimeoutError:
-            await ai_chat.finish("请求API或搜索超时，请稍后再试")
+            await ai_chat.finish("请求API超时，请稍后再试")
         except Exception as e:
             logger.opt(exception=e).error("API调用失败")
-            # 出错时重置当前对话
             conversation_histories[group_id] = []
             await ai_chat.finish("API调用失败")
-            # await deepseek_chat.finish("我好像有点晕，我们重新开始聊天吧！")
 
 
 @balance_query.handle()
-async def handle_balance_query(event: GroupMessageEvent):
-    # 白名单检查
+async def balance_query_handler(event: GroupMessageEvent):
     if not await check_group_whitelist(event.group_id):
         return
 
-    # ai聊天白名单检查
-    if not await check_ai_group_whitelist(event.group_id):
-        return
-
-    # 用户黑名单检查
     if await check_user_blacklist(event.user_id):
         return
 
-    # 从代码变量获取API密钥
+    if not await check_ai_group_whitelist(event.group_id):
+        return
+
     api_key = API_KEY
     if not api_key:
         await balance_query.finish("未配置API key")
 
-    # 发送请求到DeepSeek API
     url = BALANCE_QUART_URL
     headers = {
         'Accept': 'application/json',
@@ -433,21 +369,19 @@ async def handle_balance_query(event: GroupMessageEvent):
 
     try:
         response = requests.get(url, headers=headers, timeout=10)
-        response.raise_for_status()  # 检查HTTP错误
+        response.raise_for_status()
 
         data = response.json()
 
-        # 解析响应数据
         if not data.get("is_available", False):
             await balance_query.finish("账户不可用或未激活")
 
-        balance_info = data["balance_infos"][0]  # 取第一个币种信息
+        balance_info = data["balance_infos"][0]
         currency = balance_info["currency"]
         total = balance_info["total_balance"]
         granted = balance_info["granted_balance"]
         topped_up = balance_info["topped_up_balance"]
 
-        # 格式化响应消息
         msg = f"🎨ENA余额信息🎨\n" \
               f"• 货币类型: {currency}\n" \
               f"• 充值余额: {topped_up}\n" \
@@ -460,44 +394,35 @@ async def handle_balance_query(event: GroupMessageEvent):
 
 
     except requests.exceptions.RequestException as e:
-        # 处理网络异常
         await balance_query.send(
             MessageSegment.reply(event.message_id) + f"网络请求失败: {str(e)}"
         )
 
     except (KeyError, IndexError):
-        # 处理数据解析异常
         await balance_query.send(
             MessageSegment.reply(event.message_id) + "API响应格式异常，无法解析数据"
         )
 
     except FinishedException:
-        # 忽略由finish()引发的正常结束异常
         pass
 
     except Exception as e:
-        # 处理其他未知异常
         await balance_query.send(
             MessageSegment.reply(event.message_id) + f"发生未知错误: {str(e)}"
         )
 
 
 @reset_chat.handle()
-async def handle_reset_chat(event: GroupMessageEvent):
-    """重置当前群组的对话历史"""
-    # 白名单检查
+async def reset_chat_handler(event: GroupMessageEvent):
     if not await check_group_whitelist(event.group_id):
         return
 
-    # ai聊天白名单检查
-    if not await check_ai_group_whitelist(event.group_id):
-        return
-
-    # 用户黑名单检查
     if await check_user_blacklist(event.user_id):
         return
 
-    # 使用权限检查
+    if not await check_ai_group_whitelist(event.group_id):
+        return
+
     user_id = event.user_id
     if user_id != ADMIN_QQ:
         return
@@ -505,21 +430,14 @@ async def handle_reset_chat(event: GroupMessageEvent):
     group_id = event.group_id
 
     async with conversation_locks[group_id]:
-        # 重置对话历史但保留系统提示
         if group_id in conversation_histories:
-            # 查找系统提示
             system_prompt = next(
                 (msg for msg in conversation_histories[group_id] if msg["role"] == "system"),
                 None
             )
 
-            # 重置历史，只保留系统提示（如果存在）
             conversation_histories[group_id] = [system_prompt] if system_prompt else []
 
-        # 发送确认消息
-        # await reset_chat.finish("对话历史已重置")
-
-        # 格式化响应消息
         msg = "🎨ENA对话历史已重置🎨"
 
         await reset_chat.finish(
