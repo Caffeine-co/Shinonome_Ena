@@ -1,7 +1,7 @@
 from pathlib import Path
 import aiosqlite
 from nonebot import get_driver, on_regex, on_fullmatch
-from nonebot.adapters.onebot.v11 import Bot, GroupMessageEvent, MessageSegment, ActionFailed
+from nonebot.adapters.onebot.v11 import Bot, GroupMessageEvent, MessageSegment
 from nonebot.exception import MatcherException
 from nonebot.params import RegexGroup
 from typing import Tuple, Union, List, Dict

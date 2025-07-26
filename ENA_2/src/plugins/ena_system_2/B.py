@@ -41,7 +41,7 @@ async def _():
 # 消息响应器创建
 # --------------------------
 add_blacklist = on_regex(r"^拉黑用户\s*(\d+)$")
-del_blacklist = on_regex(r"^解除用户\s*(\d+)$")
+del_blacklist = on_regex(r"^解除拉黑\s*(\d+)$")
 query_blacklist_list = on_fullmatch(("查询黑名单列表", "查黑名单列表"))
 query_blacklist_user = on_regex(r"^查询黑名单\s*(\d+)$")
 
@@ -139,7 +139,6 @@ async def add_blacklist_handler(
         await add_blacklist.finish(
             MessageSegment.reply(event.message_id) + "🎨黑名单添加失败，请检查格式或文件权限"
         )
-
 
 
 # --------------------------
