@@ -1,6 +1,6 @@
 <div align="center">
 <img src="https://raw.githubusercontent.com/Caffeine-co/Shinonome_Ena/main/images/ena_qute_head.png" alt="icon" width="150px"/>
-<h1 align="center">🎨 Shinonome Ena v-5.2.4🎨</h1>
+<h1 align="center">🎨 Shinonome Ena v-5.7.2🎨</h1>
 <img src="https://raw.githubusercontent.com/Caffeine-co/Shinonome_Ena/main//images/ena.jpg" alt="icon" width="450px"/>
 <h3 align="center">しののめ えなです!</h3>
 
@@ -96,7 +96,19 @@
 <details>
 <summary><strong style="font-size:150%">v-5.x.x</strong></summary>
 
-#### `v-5-4-0`
+#### `v-5.7.2` —— 2025.07.26
+- 修复随机选择指令的额外判定
+#### `v-5.7.1` —— 2025.07.25
+- 修复ai聊天偶发性API处理失败的bug
+- 更改猜卡面、猜曲绘图片的获取方式
+#### `v-5.6.0` —— 2025.07.24
+- 拓展二选一为多选项随机选择
+#### `v-5.5.2` —— 2025.07.21
+- 修复漂流瓶不受宵禁限制的bug
+- 修复漂流瓶获取内容的bug
+#### `v-5.5.0` —— 2025.07.15
+- 新增宵禁限制
+#### `v-5.4.0` —— 2025.07.13
 - 修改已有的黑白名单相关的数据存储方式
 - 优化若干代码
 #### `v-5.2.4` —— 2025.07.09
@@ -251,7 +263,7 @@
 
 - 漂流瓶
 
-- 二选一
+- 随机选择
 
 - 头像双击
 
