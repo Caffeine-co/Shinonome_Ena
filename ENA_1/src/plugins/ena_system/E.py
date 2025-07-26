@@ -4,13 +4,13 @@
 from nonebot import on_startswith
 from nonebot.adapters.onebot.v11 import GroupMessageEvent, Message, MessageSegment
 
-from  ._430_ import check_group_whitelist, check_user_blacklist
+from  ._430_ import check_group_whitelist, check_user_blacklist, time_restriction
 
 
 # --------------------------
 # 事件响应器
 # --------------------------
-calculate_power = on_startswith(("计算倍率", "倍率计算"))
+calculate_power = on_startswith("计算倍率")
 calculate_together_score = on_startswith(("协力pt", "协力PT"))
 calculate_solo_score = on_startswith(("单人pt", "单人PT"))
 calculate_challenge_score = on_startswith(("挑战pt", "挑战PT"))
@@ -25,6 +25,9 @@ async def calculator_power_handler(event: GroupMessageEvent):
         return
 
     if await check_user_blacklist(event.user_id):
+        return
+
+    if await time_restriction():
         return
 
     raw_msg = event.get_plaintext()
@@ -83,6 +86,9 @@ async def calculator_together_score_handler(event: GroupMessageEvent):
     if await check_user_blacklist(event.user_id):
         return
 
+    if await time_restriction():
+        return
+
     raw_msg = event.get_plaintext()
 
     args_part = raw_msg[len("协力pt"):].strip()
@@ -135,6 +141,9 @@ async def calculator_solo_score_handler(event: GroupMessageEvent):
     if await check_user_blacklist(event.user_id):
         return
 
+    if await time_restriction():
+        return
+
     raw_msg = event.get_plaintext()
 
     args_part = raw_msg[len("单人pt"):].strip()
@@ -184,6 +193,9 @@ async def calculator_challenge_score_handler(event: GroupMessageEvent):
         return
 
     if await check_user_blacklist(event.user_id):
+        return
+
+    if await time_restriction():
         return
 
     raw_msg = event.get_plaintext()

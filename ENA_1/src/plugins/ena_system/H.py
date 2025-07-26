@@ -1,14 +1,13 @@
 # --------------------------
 # 导入区域
 # --------------------------
-import os  # 新增os模块用于文件操作
+import os
 import random
-from pathlib import Path  # 新增Path模块
+from pathlib import Path
 from nonebot import on_notice
 from nonebot.adapters.onebot.v11 import Bot, PokeNotifyEvent, MessageSegment
-from nonebot.matcher import Matcher
 
-from  ._430_ import check_group_whitelist, check_user_blacklist
+from  ._430_ import check_group_whitelist, check_user_blacklist, time_restriction
 
 
 # --------------------------
@@ -27,6 +26,9 @@ async def double_click_handler(bot: Bot, event: PokeNotifyEvent):
             return
 
         if await check_user_blacklist(event.user_id):
+            return
+
+        if await time_restriction():
             return
 
         random_num = random.randint(1, 4)

@@ -2,9 +2,12 @@
 # 导入区域
 # --------------------------
 import aiosqlite
+import os
 import re
-from datetime import datetime
+import psutil
+from datetime import datetime, time, timedelta, timezone
 from pathlib import Path
+from nonebot import require, get_bot
 
 
 # --------------------------
@@ -82,6 +85,7 @@ async def check_ai_group_whitelist(group_id: int) -> bool:
 # 使用限制检查函数
 # --------------------------
 TABLE_NAME_PATTERN = re.compile(r'^[a-zA-Z_][a-zA-Z0-9_]*$')
+
 
 async def init_db(table_names: list[str]):
     for name in table_names:
@@ -209,3 +213,65 @@ async def check_usage_ten(
             await db.commit()
 
     return not over_limit
+
+
+# --------------------------
+# 宵禁限制检查函数
+# --------------------------
+async def time_restriction() -> bool:
+    time_periods = [
+        (time(6, 30), time(23, 30)),
+    ]
+
+    timezone_offset = 8
+
+    utc_now = datetime.now(timezone.utc)
+    target_time = (utc_now + timedelta(hours=timezone_offset)).time()
+
+    for start, end in time_periods:
+        if start < end:
+            if start <= target_time < end:
+                return False
+        else:
+            if target_time >= start or target_time < end:
+                return False
+
+    return True
+
+
+# --------------------------
+# haruki连接定时任务
+# --------------------------
+require("nonebot_plugin_apscheduler")
+from nonebot_plugin_apscheduler import scheduler
+
+
+@scheduler.scheduled_job("cron", hour="6", minute="30", second="0", id="start")
+async def up_and_run():
+    print("SCHEDULER:start")
+    try:
+        os.startfile("C:/QQbot/HarukiBot/HarukiClient-Windows-x64-v1.1.7/HarukiClient-shortcut")
+        msg = "大家早上好呢~"
+    except Exception as e:
+        msg = f"早上好，但是启动Haruki失败了。\n错误信息：{str(e)}"
+
+    bot = get_bot()
+    await bot.send_group_msg(group_id=728556872, message=msg)
+
+
+@scheduler.scheduled_job("cron", hour="23", minute="30", second="0", id="end")
+async def down_and_sleep():
+    print("SCHEDULER:end")
+    try:
+        for proc in psutil.process_iter(['pid', 'name']):
+            if proc.info['name'] == 'HarukiClient-Windows-x64-v1.1.7.exe':
+                print(f"找到进程: PID={proc.info['pid']}, 名称={proc.info['name']}")
+                pid = proc.info['pid']
+                proccess = psutil.Process(pid)
+                proccess.terminate()
+        msg = "大家晚安呢~"
+    except Exception as e:
+        msg = f"晚安，但是停止Haruki失败了。\n错误信息：{str(e)}"
+
+    bot = get_bot()
+    await bot.send_group_msg(group_id=728556872, message=msg)

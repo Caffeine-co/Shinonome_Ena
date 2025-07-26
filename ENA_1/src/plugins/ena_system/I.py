@@ -5,13 +5,13 @@ import random
 from nonebot import on_regex
 from nonebot.adapters.onebot.v11 import Message, MessageSegment, GroupMessageEvent
 
-from ._430_ import check_group_whitelist, check_user_blacklist, check_usage_one
+from ._430_ import check_group_whitelist, check_user_blacklist, check_usage_one, time_restriction
 
 
 # --------------------------
 # 事件响应器
 # --------------------------
-draw_lots = on_regex(r"^(求签|抽签)\s+(\S+.*)$")
+draw_lots = on_regex(r"^(求签|抽签)\s+")
 
 
 # --------------------------
@@ -23,6 +23,9 @@ async def draw_lots_handler(event: GroupMessageEvent):
         return
 
     if await check_user_blacklist(event.user_id):
+        return
+
+    if await time_restriction():
         return
 
     user_id = event.user_id

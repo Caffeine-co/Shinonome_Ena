@@ -9,7 +9,7 @@ from nonebot.adapters.onebot.v11 import Message, MessageSegment, GroupMessageEve
 from nonebot.params import RegexGroup
 from typing import Tuple
 
-from ._430_ import check_group_whitelist, check_user_blacklist, check_usage_one
+from ._430_ import check_group_whitelist, check_user_blacklist, check_usage_one, time_restriction
 
 
 # --------------------------
@@ -43,6 +43,9 @@ async def draw_goods_handler(
         return
 
     if await check_user_blacklist(event.user_id):
+        return
+
+    if await time_restriction():
         return
 
     style = matched_groups[0].strip()

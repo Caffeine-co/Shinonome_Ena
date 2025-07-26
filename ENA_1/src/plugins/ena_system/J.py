@@ -8,12 +8,12 @@ from pathlib import Path
 from datetime import datetime
 from typing import List, Tuple
 from nonebot import on_fullmatch, on_regex
-from nonebot.exception import FinishedException
+from nonebot.exception import MatcherException
 from nonebot.adapters.onebot.v11 import GroupMessageEvent, Message, MessageSegment
 from nonebot import require
 from PIL import Image
 
-from ._430_ import check_group_whitelist, check_user_blacklist, check_usage_one, check_usage_ten
+from ._430_ import check_group_whitelist, check_user_blacklist, check_usage_one, check_usage_ten, time_restriction
 
 
 # --------------------------
@@ -258,6 +258,9 @@ async def handle_gacha_ord_one(event: GroupMessageEvent):
         if await check_user_blacklist(event.user_id):
             return
 
+        if await time_restriction():
+            return
+
         user_id = event.user_id
 
         if not (await check_usage_one(user_id, "usage_data_J", 30)):
@@ -272,8 +275,9 @@ async def handle_gacha_ord_one(event: GroupMessageEvent):
         msg = await build_ord_message(event, image_path, [(card_path, star)])
         await gacha_ord_one.finish(msg)
 
-    except FinishedException:
-        pass
+    except MatcherException:
+        raise
+
     except Exception as e:
         logger.exception("单抽处理失败")
         await gacha_ord_one.finish(
@@ -287,6 +291,9 @@ async def handle_gacha_ord_ten(event: GroupMessageEvent):
             return
 
         if await check_user_blacklist(event.user_id):
+            return
+
+        if await time_restriction():
             return
 
         user_id = event.user_id
@@ -328,8 +335,9 @@ async def handle_gacha_ord_ten(event: GroupMessageEvent):
         msg = await build_ord_message(event, image_path, results)
         await gacha_ord_ten.finish(msg)
 
-    except FinishedException:
-        pass
+    except MatcherException:
+        raise
+
     except Exception as e:
         logger.exception("十连处理失败")
         await gacha_ord_ten.finish(
@@ -343,6 +351,9 @@ async def handle_gacha_lim_one(event: GroupMessageEvent):
             return
 
         if await check_user_blacklist(event.user_id):
+            return
+
+        if await time_restriction():
             return
 
         user_id = event.user_id
@@ -359,8 +370,10 @@ async def handle_gacha_lim_one(event: GroupMessageEvent):
         msg = await build_lim_message(event, image_path, [(card_path, star)])
         await gacha_lim_one.finish(msg)
 
-    except FinishedException:
-        pass
+
+    except MatcherException:
+        raise
+
     except Exception as e:
         logger.exception("单抽处理失败")
         await gacha_lim_one.finish(
@@ -374,6 +387,9 @@ async def handle_gacha_lim_ten(event: GroupMessageEvent):
             return
 
         if await check_user_blacklist(event.user_id):
+            return
+
+        if await time_restriction():
             return
 
         user_id = event.user_id
@@ -415,8 +431,9 @@ async def handle_gacha_lim_ten(event: GroupMessageEvent):
         msg = await build_lim_message(event, image_path, results)
         await gacha_lim_ten.finish(msg)
 
-    except FinishedException:
-        pass
+    except MatcherException:
+        raise
+
     except Exception as e:
         logger.exception("十连处理失败")
         await gacha_lim_ten.finish(
@@ -429,6 +446,9 @@ async def handle_gacha_birth_one(event: GroupMessageEvent):
         if not await check_group_whitelist(event.group_id):
             return
         if await check_user_blacklist(event.user_id):
+            return
+
+        if await time_restriction():
             return
 
         user_id = event.user_id
@@ -454,8 +474,10 @@ async def handle_gacha_birth_one(event: GroupMessageEvent):
         await gacha_birth_one.finish(
             MessageSegment.reply(event.message_id) + f"{str(ve)}"
         )
-    except FinishedException:
-        pass
+
+    except MatcherException:
+        raise
+
     except Exception as e:
         logger.exception("生日单抽处理失败")
         await gacha_birth_one.finish(
@@ -468,6 +490,8 @@ async def handle_gacha_birth_ten(event: GroupMessageEvent):
         if not await check_group_whitelist(event.group_id):
             return
         if await check_user_blacklist(event.user_id):
+            return
+        if await time_restriction():
             return
 
         user_id = event.user_id
@@ -520,8 +544,10 @@ async def handle_gacha_birth_ten(event: GroupMessageEvent):
         await gacha_birth_ten.finish(
             MessageSegment.reply(event.message_id) + f"{str(ve)}"
         )
-    except FinishedException:
-        pass
+
+    except MatcherException:
+        raise
+
     except Exception as e:
         logger.exception("生日十连处理失败")
         await gacha_birth_ten.finish(

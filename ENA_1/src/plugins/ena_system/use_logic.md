@@ -7,7 +7,7 @@
 |  C     |  blindgoods    |  pjsk赛博周边盲抽    |
 |  D     |  bottles       |  漂流瓶              |
 |  E     |  calculation   |  pjsk模拟计算器      |
-|  F     |  choose        |  二选一              |
+|  F     |  choose        |  随机选择            |
 |  G     |  daily_sign    |  每日签到            |
 |  H     |  double_click  |  头像双击            |
 |  I     |  draw_lots     |  每日抽签            |

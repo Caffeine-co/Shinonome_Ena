@@ -11,7 +11,7 @@ from nonebot import on_fullmatch, on_regex
 from nonebot.adapters.onebot.v11 import Bot, GroupMessageEvent, MessageSegment
 from nonebot.params import EventPlainText, RegexGroup
 
-from  ._430_ import check_group_whitelist, check_user_blacklist, check_usage_one
+from  ._430_ import check_group_whitelist, check_user_blacklist, check_usage_one, time_restriction
 
 
 # --------------------------
@@ -19,7 +19,6 @@ from  ._430_ import check_group_whitelist, check_user_blacklist, check_usage_one
 # --------------------------
 ADMIN_GROUP_ID = 1017564050
 ADMIN_QQ = 2083909754
-BOTTLE_FILE = Path(__file__).parent / "resources/D/bottles.json"
 DB_FILE = Path(__file__).parent / "resources/D/bottles.db"
 
 
@@ -165,6 +164,9 @@ async def throw_bottle_handler(event: GroupMessageEvent):
     if await check_user_blacklist(event.user_id):
         return
 
+    if await time_restriction():
+        return
+
     user_id = event.user_id
     if not (await check_usage_one(user_id, "usage_data_D_1", 1)):
         await throw_bottle.finish(
@@ -189,6 +191,14 @@ async def throw_get_content(
 
     if await check_user_blacklist(event.user_id):
         return
+
+    if await time_restriction():
+        return
+    
+    if not content:
+        await throw_bottle.finish(
+            MessageSegment.reply(event.message_id) + "您未输入任何文本哦"
+        )
 
     if content.strip() == "退出":
         await throw_bottle.finish(
@@ -236,6 +246,9 @@ async def pick_bottle_handler(
         return
 
     if await check_user_blacklist(event.user_id):
+        return
+
+    if await time_restriction():
         return
 
     user_id = event.user_id
@@ -313,6 +326,9 @@ async def delete_bottle_handler(
     if await check_user_blacklist(event.user_id):
         return
 
+    if await time_restriction():
+        return
+
     await init_db()
 
     try:
@@ -358,8 +374,9 @@ async def view_bottle_handler(
 ):
     if not await check_group_whitelist(event.group_id):
         return
-
     if await check_user_blacklist(event.user_id):
+        return
+    if await time_restriction():
         return
 
     await init_db()
@@ -442,7 +459,6 @@ async def view_bottle_handler(
             await view_bottle.finish(
                 MessageSegment.reply(event.message_id) + "请输入有效的漂流瓶编号"
             )
-
 
     else:
         user_bottles = await get_user_bottles(user_id)

@@ -4,9 +4,9 @@
 import os
 from nonebot import on_fullmatch
 from nonebot.adapters.onebot.v11 import Bot, MessageSegment
-from nonebot.adapters.onebot.v11.event import GroupMessageEvent, MessageEvent
+from nonebot.adapters.onebot.v11.event import GroupMessageEvent
 
-from ._430_ import check_group_whitelist, check_user_blacklist
+from ._430_ import check_group_whitelist, check_user_blacklist, time_restriction
 
 
 # --------------------------
@@ -38,10 +38,13 @@ async def main(bot: Bot, ev: GroupMessageEvent):
     if await check_user_blacklist(ev.user_id):
         return
 
+    if await time_restriction():
+        return
+
     msg = []
 
     text = "\
-🎨 Shinonome Ena v-5.4.0 🎨\n\
+🎨 Shinonome Ena v-待定 🎨\n\
 小窝：絵名の部屋[728556872]\n\
 主人：咖啡不甜[2083909754]\n\n\
 本人不接私聊领养请求\n\
@@ -76,9 +79,9 @@ HarukiBot帮助\n\
 ⭕[鉴定]\n\n\
 ai聊天\n\
 ⭕发送“ai聊天帮助”查看详细使用方法\n\n\
-二选一\n\
-⭕[@我 a还是b]\n\n\
-图谜竞猜\n\
+随机选择\n\
+⭕[@我 a还是b（还是c……）]\n\n\
+猜卡面、猜曲绘\n\
 ⭕发送“猜卡面/猜曲绘帮助”查看详细使用方法\n\n\
 pjsk模拟招募\n\
 ⭕发送“抽卡帮助”查看详细使用方法\n\n\
@@ -128,6 +131,8 @@ async def main(bot: Bot, ev: GroupMessageEvent):
     if not await check_group_whitelist(ev.group_id):
         return
     if await check_user_blacklist(ev.user_id):
+        return
+    if await time_restriction():
         return
 
     msg = []
@@ -240,6 +245,8 @@ async def main(bot: Bot, ev: GroupMessageEvent):
         return
     if await check_user_blacklist(ev.user_id):
         return
+    if await time_restriction():
+        return
 
     msg = []
 
@@ -302,6 +309,8 @@ async def main(bot: Bot, ev: GroupMessageEvent):
     if not await check_group_whitelist(ev.group_id):
         return
     if await check_user_blacklist(ev.user_id):
+        return
+    if await time_restriction():
         return
 
     msg = []
@@ -375,6 +384,8 @@ async def main(bot: Bot, ev: GroupMessageEvent):
         return
     if await check_user_blacklist(ev.user_id):
         return
+    if await time_restriction():
+        return
 
     msg = []
 
@@ -445,6 +456,8 @@ async def main(bot: Bot, ev: GroupMessageEvent):
         return
     if await check_user_blacklist(ev.user_id):
         return
+    if await time_restriction():
+        return
 
     msg = []
 
@@ -514,6 +527,8 @@ async def main(bot: Bot, ev: GroupMessageEvent):
     if not await check_group_whitelist(ev.group_id):
         return
     if await check_user_blacklist(ev.user_id):
+        return
+    if await time_restriction():
         return
 
     msg = []
@@ -587,6 +602,8 @@ async def main(bot: Bot, ev: GroupMessageEvent):
     if not await check_group_whitelist(ev.group_id):
         return
     if await check_user_blacklist(ev.user_id):
+        return
+    if await time_restriction():
         return
 
     msg = []
@@ -667,6 +684,8 @@ async def main(bot: Bot, ev: GroupMessageEvent):
         return
     if await check_user_blacklist(ev.user_id):
         return
+    if await time_restriction():
+        return
 
     msg = []
 
@@ -726,6 +745,8 @@ async def main(bot: Bot, ev: GroupMessageEvent):
     if not await check_group_whitelist(ev.group_id):
         return
     if await check_user_blacklist(ev.user_id):
+        return
+    if await time_restriction():
         return
 
     msg = []

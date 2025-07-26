@@ -9,7 +9,7 @@ from nonebot import on_fullmatch
 from nonebot.adapters.onebot.v11 import Bot, Message, MessageSegment, GroupMessageEvent
 from nonebot.exception import MatcherException
 
-from  ._430_ import check_group_whitelist, check_user_blacklist, check_usage_one
+from  ._430_ import check_group_whitelist, check_user_blacklist, check_usage_one, time_restriction
 
 
 # --------------------------
@@ -69,6 +69,9 @@ async def authenticate_handler(
         return
 
     if await check_user_blacklist(event.user_id):
+        return
+
+    if await time_restriction():
         return
 
     user_id = event.user_id

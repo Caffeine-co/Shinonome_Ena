@@ -12,7 +12,7 @@ from pathlib import Path
 from nonebot import on_fullmatch
 from nonebot.adapters.onebot.v11 import MessageSegment, GroupMessageEvent
 
-from  ._430_ import check_group_whitelist, check_user_blacklist
+from  ._430_ import check_group_whitelist, check_user_blacklist, time_restriction
 
 
 # --------------------------
@@ -26,6 +26,7 @@ DATA_FILE = Path(__file__).parent / "resources/G/user_sign_data.json"
 # --------------------------
 file_lock = asyncio.Lock()
 
+
 async def read_user_data() -> dict:
     if not await aio_os.path.exists(DATA_FILE):
         return {}
@@ -33,6 +34,7 @@ async def read_user_data() -> dict:
     async with aiofiles.open(DATA_FILE, "r", encoding="utf-8") as f:
         content = await f.read()
         return json.loads(content) if content else {}
+
 
 async def write_user_data(user_id: str, update_func) -> dict:
     async with file_lock:
@@ -91,6 +93,9 @@ async def sign_handler(event: GroupMessageEvent):
     if await check_user_blacklist(event.user_id):
         return
 
+    if await time_restriction():
+        return
+
     user_id = str(event.user_id)
     today = get_today()
     yesterday = get_yesterday()
@@ -101,7 +106,7 @@ async def sign_handler(event: GroupMessageEvent):
                 "status": "already_signed",
                 "user": user
             }
-        
+
         if user["last_sign"] == yesterday:
             user["continuous_sign"] += 1
         else:
@@ -151,6 +156,9 @@ async def query_sign_handler(event: GroupMessageEvent):
         return
 
     if await check_user_blacklist(event.user_id):
+        return
+
+    if await time_restriction():
         return
 
     user_id = str(event.user_id)

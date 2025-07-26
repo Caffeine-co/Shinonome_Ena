@@ -16,6 +16,8 @@ from .J import gacha_ord_one, gacha_ord_ten, gacha_lim_one, gacha_lim_ten, gacha
 from .K import guess_character, guess_music, reply_matcher
 from .L import ena_help, ena_admin_help, ena_aichat_help, ena_blindgoods_help, ena_bottle_help, ena_gacha_help, ena_guessplay_help, ena_calculator_help, ena_pjsk_help, ena_sign_help
 
+from .picstatus.__main__ import stat_matcher
+
 
 # --------------------------
 # 插件系统元信息

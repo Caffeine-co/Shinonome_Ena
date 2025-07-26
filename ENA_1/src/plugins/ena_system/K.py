@@ -5,6 +5,8 @@ import json
 import random
 import time
 import nonebot
+import aiohttp
+import asyncio
 from pathlib import Path
 from PIL import Image
 from nonebot import require
@@ -12,17 +14,21 @@ from nonebot.adapters.onebot.v11 import Bot, GroupMessageEvent, MessageSegment
 from nonebot.plugin import on_message, on_fullmatch
 from nonebot.rule import Rule
 
-from ._430_ import check_group_whitelist, check_user_blacklist, check_usage_one
+from ._430_ import check_group_whitelist, check_user_blacklist, check_usage_one, time_restriction
 
 
 # --------------------------
 # 配置区域
 # --------------------------
-CHARACTER_IMAGE_DIR = Path(__file__).parent / "resources/K/characters"
-MUSIC_IMAGE_DIR = Path(__file__).parent / "resources/K/musics"
+CHARACTER_JSON_DIR = Path(__file__).parent / "resources/K/characters"
+MUSIC_JSON_DIR = Path(__file__).parent / "resources/K/musics"
 TEMP_DIR = Path(__file__).parent / "resources/K/temp"
+
 TIMEOUT = 30
 ANSWER_RETENTION = TIMEOUT + 10
+
+CHARACTER_BASE_URL = 'https://sekai-assets-bdf29c81.seiunx.net/jp-assets/startapp/character/member/'
+MUSIC_BASE_URL = 'https://sekai-assets-bdf29c81.seiunx.net/jp-assets/startapp/music/jacket/'
 
 TEMP_DIR.mkdir(parents=True, exist_ok=True)
 
@@ -32,121 +38,97 @@ TEMP_DIR.mkdir(parents=True, exist_ok=True)
 # --------------------------
 sessions = {}
 
-message_id_to_answer = {}
+message_id_to_answer = {}  # type: dict[int, dict]
+
+session_locks = {}
 
 
 # --------------------------
 # 核心功能函数
 # --------------------------
-def get_character_info(character_dir: Path) -> tuple[str, list[str]]:
-    json_path = character_dir / f"{character_dir.name}.json"
+async def download_image(url: str, save_path: Path) -> bool:
+    try:
+        async with aiohttp.ClientSession() as session:
+            async with session.get(url) as response:
+                if response.status == 200:
+                    with open(save_path, 'wb') as f:
+                        f.write(await response.read())
+                    return True
+    except Exception as e:
+        nonebot.logger.error(f"图片下载失败: {e}")
+    return False
 
-    folder_name = character_dir.name
+async def select_random_character() -> tuple[Path | None, str | None, list[str] | None]:
+    if not CHARACTER_JSON_DIR.exists():
+        return None, None, None
 
-    display_name = folder_name
-    aliases_list = [folder_name.lower()]
+    json_files = list(CHARACTER_JSON_DIR.glob("*.json"))
+    if not json_files:
+        return None, None, None
 
-    if json_path.exists():
-        try:
-            with open(json_path, "r", encoding="utf-8-sig") as f:
-                data = json.load(f)
+    json_path = random.choice(json_files)
 
-                if "display_name" in data and data["display_name"]:
-                    display_name = data["display_name"]
+    try:
+        with open(json_path, "r", encoding="utf-8-sig") as f:
+            data = json.load(f)
 
-                aliases_list = []
-                if "aliases" in data and isinstance(data["aliases"], list):
-                    aliases_list = [a.lower() for a in data["aliases"] if a]
+        display_name = data.get("display_name", json_path.stem)
 
-                if display_name.lower() not in aliases_list:
-                    aliases_list.append(display_name.lower())
+        aliases = [a.lower() for a in data.get("aliases", [])]
 
-                if folder_name.lower() not in aliases_list:
-                    aliases_list.append(folder_name.lower())
+        if display_name.lower() not in aliases:
+            aliases.append(display_name.lower())
 
-                if not aliases_list:
-                    aliases_list = [display_name.lower()]
+        if not data.get("url_list"):
+            return None, None, None
 
-        except Exception as e:
-            nonebot.logger.error(f"解析角色JSON失败: {e}，使用默认值")
+        relative_path = random.choice(data["url_list"])
+        image_url = CHARACTER_BASE_URL + relative_path
 
-    return display_name, aliases_list
+        temp_file = TEMP_DIR / f"char_{time.time_ns()}.png"
+        if await download_image(image_url, temp_file):
+            return temp_file, display_name, aliases
 
-def get_music_info(music_dir: Path) -> tuple[str, list[str]]:
-    json_path = music_dir / f"{music_dir.name}.json"
+    except Exception as e:
+        nonebot.logger.error(f"角色JSON解析失败: {e}")
 
-    folder_name = music_dir.name
+    return None, None, None
 
-    display_name = folder_name
-    aliases_list = [folder_name.lower()]
+async def select_random_music() -> tuple[Path | None, str | None, list[str] | None]:
+    if not MUSIC_JSON_DIR.exists():
+        return None, None, None
 
-    if json_path.exists():
-        try:
-            with open(json_path, "r", encoding="utf-8-sig") as f:
-                data = json.load(f)
+    json_files = list(MUSIC_JSON_DIR.glob("*.json"))
+    if not json_files:
+        return None, None, None
 
-                if "display_name" in data and data["display_name"]:
-                    display_name = data["display_name"]
+    json_path = random.choice(json_files)
 
-                aliases_list = []
-                if "aliases" in data and isinstance(data["aliases"], list):
-                    aliases_list = [a.lower() for a in data["aliases"] if a]
+    try:
+        with open(json_path, "r", encoding="utf-8-sig") as f:
+            data = json.load(f)
 
-                if display_name.lower() not in aliases_list:
-                    aliases_list.append(display_name.lower())
+        display_name = data.get("display_name", json_path.stem)
 
-                if folder_name.lower() not in aliases_list:
-                    aliases_list.append(folder_name.lower())
+        aliases = [a.lower() for a in data.get("aliases", [])]
 
-                if not aliases_list:
-                    aliases_list = [display_name.lower()]
+        if display_name.lower() not in aliases:
+            aliases.append(display_name.lower())
 
-        except Exception as e:
-            nonebot.logger.error(f"解析歌曲JSON失败: {e}，使用默认值")
+        if not data.get("url_list"):
+            return None, None, None
 
-    return display_name, aliases_list
+        relative_path = random.choice(data["url_list"])
+        image_url = MUSIC_BASE_URL + relative_path
 
-def select_random_character_image() -> tuple[Path | None, Path | None, str | None, list[str] | None]:
-    if not CHARACTER_IMAGE_DIR.exists():
-        return None, None, None, None
+        temp_file = TEMP_DIR / f"music_{time.time_ns()}.png"
+        if await download_image(image_url, temp_file):
+            return temp_file, display_name, aliases
 
-    character_dirs = [d for d in CHARACTER_IMAGE_DIR.iterdir() if d.is_dir()]
-    if not character_dirs:
-        return None, None, None, None
+    except Exception as e:
+        nonebot.logger.error(f"歌曲JSON解析失败: {e}")
 
-    character_dir = random.choice(character_dirs)
-
-    images = [f for f in character_dir.glob("*")
-              if f.is_file() and f.suffix.lower() in [".jpg", ".jpeg", ".png", ".gif", ".bmp"]
-              and not f.name.endswith(".json")]
-
-    if not images:
-        return None, None, None, None
-
-    image_path = random.choice(images)
-    display_name, aliases = get_character_info(character_dir)
-    return character_dir, image_path, display_name, aliases
-
-def select_random_music_image() -> tuple[Path | None, Path | None, str | None, list[str] | None]:
-    if not MUSIC_IMAGE_DIR.exists():
-        return None, None, None, None
-
-    music_dirs = [d for d in MUSIC_IMAGE_DIR.iterdir() if d.is_dir()]
-    if not music_dirs:
-        return None, None, None, None
-
-    music_dir = random.choice(music_dirs)
-
-    images = [f for f in music_dir.glob("*")
-              if f.is_file() and f.suffix.lower() in [".jpg", ".jpeg", ".png", ".gif", ".bmp"]
-              and not f.name.endswith(".json")]
-
-    if not images:
-        return None, None, None, None
-
-    image_path = random.choice(images)
-    display_name, aliases = get_music_info(music_dir)
-    return music_dir, image_path, display_name, aliases
+    return None, None, None
 
 def crop_character_image(image_path: Path) -> Path:
     img = Image.open(image_path)
@@ -165,7 +147,7 @@ def crop_character_image(image_path: Path) -> Path:
 
     cropped = img.crop((left, upper, right, lower))
 
-    temp_file = TEMP_DIR / f"character_{time.time_ns()}.png"
+    temp_file = TEMP_DIR / f"character_crop_{time.time_ns()}.png"
     cropped.save(temp_file)
     return temp_file
 
@@ -184,7 +166,7 @@ def crop_music_image(image_path: Path) -> Path:
 
     cropped = img.crop((left, upper, left + crop_width, upper + crop_height))
 
-    temp_file = TEMP_DIR / f"music_{time.time_ns()}.png"
+    temp_file = TEMP_DIR / f"music_crop_{time.time_ns()}.png"
     cropped.save(temp_file)
     return temp_file
 
@@ -195,13 +177,15 @@ def crop_music_image(image_path: Path) -> Path:
 require("nonebot_plugin_apscheduler")
 from nonebot_plugin_apscheduler import scheduler
 
-@scheduler.scheduled_job("interval", minutes=10)
+@scheduler.scheduled_job("cron", hour="0", minute="0", second="0", id="clean")
 def cleanup_temp_files():
     for file in TEMP_DIR.glob("*"):
         if file.is_file():
             try:
                 file.unlink()
-            except:
+                nonebot.logger.debug(f"清理临时文件成功: {file}")
+            except Exception as e:
+                nonebot.logger.error(f"清理临时文件失败: {file}: {e}")
                 pass
 
 @scheduler.scheduled_job("interval", seconds=10)
@@ -216,6 +200,7 @@ async def cleanup_sessions():
 
             try:
                 bot = nonebot.get_bot()
+
                 reply_msg = MessageSegment.reply(session["trigger_msg_id"]) + \
                             MessageSegment.text("时间到！正确答案是：") + \
                             MessageSegment.text(session["display_name"]) + \
@@ -233,14 +218,19 @@ async def cleanup_sessions():
                 nonebot.logger.error(f"发送超时提示失败：{e}")
 
             finally:
-                if session["cropped_image"].exists():
-                    try:
-                        session["cropped_image"].unlink()
-                    except:
-                        pass
+                for file in [session["original_image"], session["cropped_image"]]:
+                    if file and file.exists():
+                        try:
+                            file.unlink()
+                            nonebot.logger.debug(f"清理临时文件: {file}")
+                        except Exception as e:
+                            nonebot.logger.error(f"清理文件失败 {file}: {e}")
+                            pass
 
     for key in expired_keys:
         sessions.pop(key, None)
+        if key in session_locks:
+            session_locks.pop(key, None)
 
     expired_msg_ids = [
         msg_id for msg_id, data in message_id_to_answer.items()
@@ -258,10 +248,20 @@ async def check_reply(event: GroupMessageEvent) -> bool:
         return False
 
     session_key = (event.user_id, event.group_id)
+
     if session_key in sessions:
         return event.reply.message_id == sessions[session_key]["bot_msg_id"]
 
     return event.reply.message_id in message_id_to_answer
+
+
+# --------------------------
+# 会话锁处理
+# --------------------------
+async def get_session_lock(session_key: tuple) -> asyncio.Lock:
+    if session_key not in session_locks:
+        session_locks[session_key] = asyncio.Lock()
+    return session_locks[session_key]
 
 
 # --------------------------
@@ -279,8 +279,9 @@ reply_matcher = on_message(rule=Rule(check_reply), block=True)
 async def guess_character_handler(bot: Bot, event: GroupMessageEvent):
     if not await check_group_whitelist(event.group_id):
         return
-
     if await check_user_blacklist(event.user_id):
+        return
+    if await time_restriction():
         return
 
     user_id = event.user_id
@@ -293,63 +294,73 @@ async def guess_character_handler(bot: Bot, event: GroupMessageEvent):
 
     session_key = (event.user_id, event.group_id)
 
-    if session_key in sessions:
-        if time.time() - sessions[session_key]["timestamp"] > TIMEOUT:
-            del sessions[session_key]
-        else:
+    lock = await get_session_lock(session_key)
+
+    if lock.locked():
+        await guess_character.finish(
+            MessageSegment.reply(event.message_id) + \
+            MessageSegment.text("您有一个游戏正在准备中，请稍后再试")
+        )
+
+    async with lock:
+        if session_key in sessions:
+            if time.time() - sessions[session_key]["timestamp"] > TIMEOUT:
+                del sessions[session_key]
+            else:
+                await guess_character.finish(
+                    MessageSegment.reply(event.message_id) + \
+                    MessageSegment.text("您有一个进行中的游戏，请先完成或等待超时。")
+                )
+
+        original_image, display_name, aliases = await select_random_character()
+        if not all([original_image, display_name, aliases]):
             await guess_character.finish(
                 MessageSegment.reply(event.message_id) + \
-                MessageSegment.text("您有一个进行中的游戏，请先完成或等待超时。")
+                MessageSegment.text("暂时无法开始游戏，请联系开发者检查资源")
             )
 
-    character_dir, image_path, display_name, aliases = select_random_character_image()
-    if not all([character_dir, image_path, display_name, aliases]):
-        await guess_character.finish(
-            MessageSegment.reply(event.message_id) + \
-            MessageSegment.text("暂时无法开始游戏，请联系开发者检查资源")
-        )
+        try:
+            cropped_image = crop_character_image(original_image)
 
-    try:
-        cropped_path = crop_character_image(image_path)
+        except Exception as e:
+            nonebot.logger.error(f"角色图片处理失败：{e}")
+            await guess_character.finish(
+                MessageSegment.reply(event.message_id) + \
+                MessageSegment.text("角色图片处理失败，请稍后再试")
+            )
 
-    except Exception as e:
-        nonebot.logger.error(f"角色图片处理失败：{e}")
-        await guess_character.finish(
-            MessageSegment.reply(event.message_id) + \
-            MessageSegment.text("角色图片处理失败，请稍后再试")
-        )
+        try:
+            message = MessageSegment.reply(event.message_id) + \
+                      MessageSegment.text("你有30秒的时间回答") + \
+                      MessageSegment.image(cropped_image)
+            result = await bot.send(event, message)
 
-    try:
-        message = MessageSegment.reply(event.message_id) + \
-                  MessageSegment.text("你有30秒的时间回答") + \
-                  MessageSegment.image(cropped_path)
-        result = await bot.send(event, message)
+            sessions[session_key] = {
+                "game_type": "卡面",
+                "display_name": display_name,
+                "aliases": aliases,
+                "original_image": original_image,
+                "cropped_image": cropped_image,
+                "timestamp": time.time(),
+                "bot_msg_id": result["message_id"],
+                "trigger_msg_id": event.message_id
+            }
 
-        sessions[session_key] = {
-            "game_type": "卡面",
-            "display_name": display_name,
-            "aliases": aliases,
-            "original_image": image_path,
-            "cropped_image": cropped_path,
-            "timestamp": time.time(),
-            "bot_msg_id": result["message_id"],
-            "trigger_msg_id": event.message_id
-        }
-
-    except Exception as e:
-        nonebot.logger.error(f"猜卡面游戏初始化失败：{e}")
-        await guess_character.finish(
-            MessageSegment.reply(event.message_id) + \
-            MessageSegment.text("猜卡面游戏初始化失败，请稍后再试")
-        )
+        except Exception as e:
+            nonebot.logger.error(f"猜卡面游戏初始化失败：{e}")
+            await guess_character.finish(
+                MessageSegment.reply(event.message_id) + \
+                MessageSegment.text("猜卡面游戏初始化失败，请稍后再试")
+            )
 
 
 @guess_music.handle()
 async def guess_music_handler(bot: Bot, event: GroupMessageEvent):
     if not await check_group_whitelist(event.group_id):
         return
-
     if await check_user_blacklist(event.user_id):
+        return
+    if await time_restriction():
         return
 
     user_id = event.user_id
@@ -362,55 +373,64 @@ async def guess_music_handler(bot: Bot, event: GroupMessageEvent):
 
     session_key = (event.user_id, event.group_id)
 
-    if session_key in sessions:
-        if time.time() - sessions[session_key]["timestamp"] > TIMEOUT:
-            del sessions[session_key]
-        else:
+    lock = await get_session_lock(session_key)
+
+    if lock.locked():
+        await guess_music.finish(
+            MessageSegment.reply(event.message_id) + \
+            MessageSegment.text("您有一个游戏正在准备中，请稍后再试")
+        )
+
+    async with lock:
+        if session_key in sessions:
+            if time.time() - sessions[session_key]["timestamp"] > TIMEOUT:
+                del sessions[session_key]
+            else:
+                await guess_music.finish(
+                    MessageSegment.reply(event.message_id) + \
+                    MessageSegment.text("您有一个进行中的游戏，请先完成或等待超时。")
+                )
+
+        original_image, display_name, aliases = await select_random_music()
+        if not all([original_image, display_name, aliases]):
             await guess_music.finish(
                 MessageSegment.reply(event.message_id) + \
-                MessageSegment.text("您有一个进行中的游戏，请先完成或等待超时。")
+                MessageSegment.text("暂时无法开始游戏，请联系开发者检查资源")
             )
 
-    song_dir, image_path, display_name, aliases = select_random_music_image()
-    if not all([song_dir, image_path, display_name, aliases]):
-        await guess_music.finish(
-            MessageSegment.reply(event.message_id) + \
-            MessageSegment.text("暂时无法开始游戏，请联系开发者检查资源")
-        )
+        try:
+            cropped_image = crop_music_image(original_image)
 
-    try:
-        cropped_path = crop_music_image(image_path)
+        except Exception as e:
+            nonebot.logger.error(f"曲绘图片处理失败：{e}")
+            await guess_music.finish(
+                MessageSegment.reply(event.message_id) + \
+                MessageSegment.text("曲绘图片处理失败，请稍后再试")
+            )
 
-    except Exception as e:
-        nonebot.logger.error(f"曲绘图片处理失败：{e}")
-        await guess_music.finish(
-            MessageSegment.reply(event.message_id) + \
-            MessageSegment.text("曲绘图片处理失败，请稍后再试")
-        )
+        try:
+            message = MessageSegment.reply(event.message_id) + \
+                      MessageSegment.text("你有30秒的时间回答") + \
+                      MessageSegment.image(cropped_image)
+            result = await bot.send(event, message)
 
-    try:
-        message = MessageSegment.reply(event.message_id) + \
-                  MessageSegment.text("你有30秒的时间回答") + \
-                  MessageSegment.image(cropped_path)
-        result = await bot.send(event, message)
+            sessions[session_key] = {
+                "game_type": "曲绘",
+                "display_name": display_name,
+                "aliases": aliases,
+                "original_image": original_image,
+                "cropped_image": cropped_image,
+                "timestamp": time.time(),
+                "bot_msg_id": result["message_id"],
+                "trigger_msg_id": event.message_id
+            }
 
-        sessions[session_key] = {
-            "game_type": "曲绘",
-            "display_name": display_name,
-            "aliases": aliases,
-            "original_image": image_path,
-            "cropped_image": cropped_path,
-            "timestamp": time.time(),
-            "bot_msg_id": result["message_id"],
-            "trigger_msg_id": event.message_id
-        }
-
-    except Exception as e:
-        nonebot.logger.error(f"游戏初始化失败：{e}")
-        await guess_music.finish(
-            MessageSegment.reply(event.message_id) + \
-            MessageSegment.text("游戏初始化失败，请稍后再试")
-        )
+        except Exception as e:
+            nonebot.logger.error(f"游戏初始化失败：{e}")
+            await guess_music.finish(
+                MessageSegment.reply(event.message_id) + \
+                MessageSegment.text("游戏初始化失败，请稍后再试")
+            )
 
 
 @reply_matcher.handle()
@@ -449,14 +469,18 @@ async def handle_reply(event: GroupMessageEvent):
             reply_msg += MessageSegment.text(f"猜错了哦，正确答案是：{session['display_name']}")
 
         reply_msg += MessageSegment.image(session["original_image"])
+
         await reply_matcher.send(reply_msg)
 
         del sessions[session_key]
-        if session["cropped_image"].exists():
-            try:
-                session["cropped_image"].unlink()
-            except:
-                pass
+        for file in [session["original_image"], session["cropped_image"]]:
+            if file and file.exists():
+                try:
+                    file.unlink()
+                    nonebot.logger.debug(f"清理临时文件: {file}")
+                except Exception as e:
+                    nonebot.logger.error(f"清理文件失败 {file}: {e}")
+                    pass
         return
 
     if reply_msg_id in message_id_to_answer:

@@ -3,46 +3,52 @@
 # --------------------------
 import random
 import re
-from nonebot.adapters.onebot.v11 import GroupMessageEvent, MessageSegment, Message
+from nonebot.adapters.onebot.v11 import Bot, GroupMessageEvent, MessageSegment, Message
 from nonebot.plugin import on_regex
-from nonebot.rule import to_me
 
-from  ._430_ import check_group_whitelist, check_user_blacklist
-
+from ._430_ import check_group_whitelist, check_user_blacklist, time_restriction
 
 # --------------------------
 # 事件响应器
 # --------------------------
-choose = on_regex(r"^(.+?)还是(.+?)$",rule=to_me())
+choose = on_regex(r"^\s*(.+?)\s*还是\s*(.+?)(?:\s*还是\s*.+)*\s*$")
 
 
 # --------------------------
 # 事件处理
 # --------------------------
 @choose.handle()
-async def choose_handler(event: GroupMessageEvent):
+async def choose_handler(bot: Bot, event: GroupMessageEvent):
     if not await check_group_whitelist(event.group_id):
         return
 
     if await check_user_blacklist(event.user_id):
         return
 
-    msg = event.get_plaintext().strip()
-    
-    match = re.match(r"^(.+?)还是(.+?)$", msg)
-    if not match:
+    at_id = re.findall("[0-9]{5,11}", event.raw_message)
+    if len(at_id) == 0:
         return
-    
-    option1 = match.group(1).strip()
-    option2 = match.group(2).strip()
-    option3 = "全都要"
-    option4 = "都不要"
+    at_id = at_id[0]
+    if at_id != bot.self_id:
+        return
 
-    result = random.choice([option1, option2, option3, option4])
-    
+    if await time_restriction():
+        return
+
+    option = [opt.strip() for opt in event.get_plaintext().split("还是") if opt.strip()]
+
+    if len(option) < 2:
+        return
+
+    option.append("全都要")
+    option.append("都不要")
+
+    result = random.choice(option)
+
+    # 构建引用回复消息
     reply_msg = Message([
         MessageSegment.reply(event.message_id),
         MessageSegment.text(f"Ena建议你选择{result}")
     ])
-    
+
     await choose.finish(reply_msg)
