@@ -1,7 +1,7 @@
 <div align="center">
-<img src="https://raw.githubusercontent.com/Caffeine-co/Shinonome_Ena/main/images/ena_qute_head.png" alt="icon" width="150px"/>
+<img src="https://raw.githubusercontent.com/Caffeine-co/Shinonome_Ena/old/images/ena_qute_head.png" alt="icon" width="150px"/>
 <h1 align="center">🎨 Shinonome Ena v-5.7.2🎨</h1>
-<img src="https://raw.githubusercontent.com/Caffeine-co/Shinonome_Ena/main//images/ena.jpg" alt="icon" width="450px"/>
+<img src="https://raw.githubusercontent.com/Caffeine-co/Shinonome_Ena/old//images/ena.jpg" alt="icon" width="450px"/>
 <h3 align="center">しののめ えなです!</h3>
 
 [![nonebot v2.4.2](https://img.shields.io/static/v1?label=nonebot&message=v2.4.2&color=red)](https://v2.nonebot.dev)
