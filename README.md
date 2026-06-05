@@ -1,3 +1,3 @@
-The new Robot repository is here: [Niigo-Chat-Robot](https://github.com/Caffeine-co/Niigo-Chat-Robot)
+The new Robot repository is here: [Chat-Niigo](https://github.com/Caffeine-co/Chat-Niigo)
 
 If you want to browse the old code, please switch the branch `old`.
